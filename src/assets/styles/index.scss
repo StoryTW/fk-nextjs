@@ -1,39 +1,3 @@
 @import './consts.scss';
 @import './globals.scss';
 
-#popoverProfile {
-  position: relative;
-  z-index: 1010;
-}
-
-#telegram-widget-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  margin: auto;
-  width: 100% !important;
-  height: 48px;
-  z-index: 0;
-  filter: opacity(0);
-
-  #telegram-login-SteamRuOfficalBot {
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 16px;
-    z-index: 1;
-    width: 100% !important;
-    height: 48px !important;
-  }
-}
-
-#usedesk-messenger {
-  @include respond(mobileL) {
-    .uw__messenger-layout__buttons {
-      bottom: 100px;
-    }
-  }
-}
