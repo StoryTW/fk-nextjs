@@ -1,0 +1,252 @@
+// Media Queries Mixins
+@mixin respond($breakpoint) {
+  @if $breakpoint==laptopXL {
+    @media only screen and (max-width: 2560px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptopL {
+    @media only screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptopB {
+    @media only screen and (max-width: 1250px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptopC {
+    @media only screen and (max-width: 1150px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptop {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletL {
+    @media only screen and (max-width: 912px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletS {
+    @media only screen and (max-width: 834px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tablet {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletS {
+    @media only screen and (max-width: 744px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletContainer {
+    @media only screen and (max-width: 704px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletSM {
+    @media only screen and (max-width: 602px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobileL {
+    @media only screen and (max-width: 475px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobile {
+    @media only screen and (max-width: 425px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobileSM {
+    @media only screen and (max-width: 414px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobile360 {
+    @media only screen and (max-width: 360px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobileS {
+    @media only screen and (max-width: 320px) {
+      @content;
+    }
+  }
+}
+
+// Smooth Transition
+@mixin transition {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@mixin noScrollBar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+//Typography
+@mixin H2_Typography {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135%;
+
+  @include respond(tabletL) {
+    font-size: 28px;
+  }
+}
+
+@mixin H2_Blog {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135%;
+}
+
+@mixin H3_Blog {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135%;
+}
+
+@mixin H4_Blog {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135%;
+}
+
+@mixin P_Blog {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+
+  @include respond(tabletL) {
+    font-size: 16px;
+  }
+}
+
+@mixin P_Default {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  letter-spacing: normal;
+}
+
+@mixin P_Input {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%; /* 27px */
+}
+
+//NEW FONTS
+@mixin Regular_12 {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+@mixin Regular_14 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+@mixin Regular_16 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+@mixin Regular_18 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@mixin Semibold_12 {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+@mixin Semibold_14 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+@mixin Semibold_18 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+@mixin Semibold_22 {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+@mixin Bold_16 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135%;
+}
+
+@mixin Bold_24 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135%;
+}
+
+@mixin Bold_40 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135%;
+}
