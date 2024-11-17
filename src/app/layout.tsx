@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
+import { Header } from '@/layout/Header/Header';
+import { Footer } from '@/layout/Footer/Footer';
 import '@/assets/styles/index.scss'
 
 type RootLayoutType = Readonly<{
@@ -18,7 +20,11 @@ const openSans = Open_Sans({
 export default function RootLayout({ children }: RootLayoutType) {
   return (
     <html lang='ru'>
-      <body className={openSans.className}>{children}</body>
+      <body className={openSans.className}>
+        <Header/>
+        {children}
+        <Footer/>
+      </body>
     </html>
   );
 }
