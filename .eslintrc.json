@@ -42,15 +42,6 @@
       },
       { "blankLine": "always", "prev": "multiline-const", "next": "*" }
     ],
-    "@typescript-eslint/padding-line-between-statements": [
-      "warn",
-      {
-        "blankLine": "always",
-        "prev": "*",
-        "next": ["interface", "type"]
-      }
-    ],
-
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
