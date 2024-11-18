@@ -2,4 +2,12 @@
   height: 774px;
   position: relative;
   background: no-repeat center bottom url('/images/bgs_header.jpg');
+  max-width: 1600px;
+  margin: 0 auto;
+
+  .wrapper {
+    margin: 0 auto;
+    width: 1324px;
+    max-width: 100%;
+  }
 }

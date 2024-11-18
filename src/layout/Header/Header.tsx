@@ -7,9 +7,11 @@ import { NextButton } from './NextButton/NextButton'
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <NavigationPanel />
-      <SwiperBlock />
-      <NextButton />
+      <div className={styles.wrapper}>
+        <NavigationPanel />
+        <SwiperBlock />
+        <NextButton />
+      </div>
     </header>
   )
 }

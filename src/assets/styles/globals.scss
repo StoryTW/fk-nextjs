@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  max-width: 1256px;
+  max-width: 1632px;
   margin: 0 auto;
   padding: 0 16px;
   width: 100%;
@@ -82,12 +82,12 @@ button:focus {
 
 body {
   margin: 0;
-  background: var(--header_bg);
+  background: var(--white);
   position: relative;
   min-height: 100vh;
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  color: var(--white);
+  color: var(--black);
 
   scrollbar-gutter: stable;
 }
