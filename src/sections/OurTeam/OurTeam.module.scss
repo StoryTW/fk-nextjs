@@ -1,7 +1,9 @@
 .ourTeam {
-  margin-bottom: 24px;
+  padding-bottom: 80px;
   position: relative;
-  background: no-repeat top right url('/images/our-team/bgs_logo.png');
+  background: 
+    no-repeat top right url('/images/our-team/bgs_logo.png'),
+    no-repeat bottom -30px right url('/images/our-team/bgs_logo_2.png'),
 }
 
 .title {

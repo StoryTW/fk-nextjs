@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
 import { Header } from '@/layout/Header/Header';
 import { Footer } from '@/layout/Footer/Footer';
-import clsx from 'clsx';
 import '@/assets/styles/index.scss'
 
 type RootLayoutType = Readonly<{

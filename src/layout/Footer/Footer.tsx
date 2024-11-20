@@ -2,11 +2,54 @@ import React from 'react';
 import styles from './Footer.module.scss';
 import clsx from 'clsx';
 
+const DATA = [
+  {
+    href: '#',
+    name: 'Обратная связь',
+  },
+  {
+    href: '#',
+    name: 'Безопасность',
+  },
+  {
+    href: '#',
+    name: 'Процедура AML',
+  },
+  {
+    href: '#',
+    name: 'Гарантии',
+  },
+  {
+    href: '#',
+    name: 'Описание KYC',
+  },
+  {
+    href: '#',
+    name: 'Сми о нас',
+  },
+  {
+    href: '#',
+    name: 'Описание API',
+  },
+];
+
 export const Footer = () => {
   return (
     <footer className={clsx(styles.footer, 'container')}>
       <div className={styles.wrapper}>
-        <div className={styles.nav}></div>
+        <div className={styles.nav}>
+          <ul className={styles.list}>
+            {DATA.map((item, index) => {
+              return (
+                <li key={index} className={styles.item}>
+                  <a href={item.href} target='_blank'>
+                    {item.name}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
         <div className={styles.info}>
           График работы:
           <br />
