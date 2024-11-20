@@ -1,0 +1,26 @@
+.card {
+  position: relative;
+  background: no-repeat center bottom -32px url('/images/our-team/orange_light_card.png');
+  background-size: 120%;
+  padding: 10px;
+
+  .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+  }
+
+  .name {
+    text-align: center;
+    @include OpenSans_18_400;
+    color: var(--black);
+    margin-bottom: 28px;
+  }
+
+  .description {
+    text-align: center;
+    @include OpenSans_18_400;
+    font-style: italic;
+  }
+}

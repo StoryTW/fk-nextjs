@@ -1,0 +1,27 @@
+.aboutUs {
+  height: 774px;
+  position: relative;
+  background: no-repeat center bottom url('/images/bgs_section_about.png');
+}
+
+.title {
+  @include OpenSans_36_400;
+  color: var(--black);
+  padding-top: 82px;
+  text-align: center;
+  margin-bottom: 58px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: no-repeat center bottom url('/images/about/bg-white-about.png');
+  height: 316px;
+}
+
+.img {
+  position: absolute;
+  left: 57px;
+  bottom: -30px;
+}

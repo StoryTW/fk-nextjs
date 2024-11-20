@@ -16,6 +16,8 @@ export const metadata: Metadata = {
 
 const openSans = Open_Sans({
   subsets: ['cyrillic', 'latin'],
+  style: ['normal', 'italic'],
+  preload: true,
 });
 
 export default function RootLayout({ children }: RootLayoutType) {

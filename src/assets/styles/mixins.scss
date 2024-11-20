@@ -115,138 +115,30 @@
 }
 
 //Typography
-@mixin H2_Typography {
-  font-size: 40px;
+@mixin OpenSans_36_400 {
+  font-size: 36px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 135%;
-
-  @include respond(tabletL) {
-    font-size: 28px;
-  }
-}
-
-@mixin H2_Blog {
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 135%;
 }
 
-@mixin H3_Blog {
+@mixin OpenSans_18_400 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+@mixin OpenSans_21_400 {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+@mixin OpenSans_24_600 {
   font-size: 24px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 135%;
-}
-
-@mixin H4_Blog {
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 135%;
-}
-
-@mixin P_Blog {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 135%;
-
-  @include respond(tabletL) {
-    font-size: 16px;
-  }
-}
-
-@mixin P_Default {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 135%;
-  letter-spacing: normal;
-}
-
-@mixin P_Input {
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 135%; /* 27px */
-}
-
-//NEW FONTS
-@mixin Regular_12 {
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16px;
-}
-
-@mixin Regular_14 {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px;
-}
-
-@mixin Regular_16 {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 135%;
-}
-
-@mixin Regular_18 {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-}
-
-@mixin Semibold_12 {
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 14px;
-}
-
-@mixin Semibold_14 {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 20px;
-}
-
-@mixin Semibold_18 {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-}
-
-@mixin Semibold_22 {
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 26px;
-}
-
-@mixin Bold_16 {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 135%;
-}
-
-@mixin Bold_24 {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 135%;
-}
-
-@mixin Bold_40 {
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 135%;
 }

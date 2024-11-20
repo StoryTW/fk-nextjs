@@ -1,0 +1,42 @@
+.online {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100px;
+  padding: 0 125px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  ::after {
+    width: 208px;
+    height: 256px;
+    content: ' ';
+    display: block;
+    position: absolute;
+    right: -58px;
+    top: 50%;
+    margin: -128px 0 0 0;
+    background: no-repeat 0 0 url('/images/online.png');
+    transition: filter 0.3s ease;
+    pointer-events: none;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0));
+  }
+
+  &:hover {
+    ::after {
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    }
+  }
+
+  .text {
+    @include OpenSans_24_600;
+    color: var(--orange);
+  }
+
+  .description {
+    @include OpenSans_18_400;
+    color: var(--gray);
+  }
+}

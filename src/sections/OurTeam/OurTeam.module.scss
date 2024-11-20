@@ -1,0 +1,90 @@
+.ourTeam {
+  margin-bottom: 24px;
+  position: relative;
+  background: no-repeat top right url('/images/our-team/bgs_logo.png');
+}
+
+.title {
+  @include OpenSans_36_400;
+  color: var(--black);
+  text-align: center;
+  padding: 20px 0px;
+  position: relative;
+  margin-bottom: 48px;
+
+  .line {
+    position: absolute;
+    bottom: 20px;
+    right: 37%;
+    z-index: -1;
+  }
+}
+
+.content {
+  padding: 0px 200px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 280px));
+  justify-content: space-between;
+  gap: 48px 0px;
+  margin-bottom: 48px;
+}
+
+.info {
+  padding: 0px 200px;
+  @include OpenSans_21_400;
+  color: var(--black);
+  margin-bottom: 56px;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 200px;
+}
+
+.socials {
+  .item_one {
+    display: flex;
+    align-items: center;
+    margin-bottom: 36px;
+
+    .name {
+      @include OpenSans_18_400;
+      color: var(--black);
+      padding-right: 116px;
+      text-transform: uppercase;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      a {
+        @include transition;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .item_two {
+    display: flex;
+    align-items: center;
+
+    .name {
+      @include OpenSans_18_400;
+      color: var(--black);
+      padding-right: 100px;
+      text-transform: uppercase;
+    }
+
+    .phone {
+      @include OpenSans_18_400;
+      color: var(--black);
+    }
+  }
+}
