@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Online.module.scss';
-import Image from 'next/image';
 
 export const Online = () => {
   return (
