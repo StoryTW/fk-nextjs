@@ -25,7 +25,7 @@ const DATA = [
   },
   {
     href: '#',
-    name: 'Сми о нас',
+    name: 'СМИ о нас',
   },
   {
     href: '#',
