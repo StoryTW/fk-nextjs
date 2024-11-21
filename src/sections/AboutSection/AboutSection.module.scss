@@ -5,23 +5,32 @@
 }
 
 .title {
+  position: relative;
+  text-align: center;
   @include OpenSans_36_400;
   color: var(--black);
   padding-top: 82px;
-  text-align: center;
   margin-bottom: 58px;
+  z-index: 2;
+
+  .line {
+    position: absolute;
+    bottom: 0px;
+    right: 46%;
+    z-index: -1;
+  }
 }
 
 .content {
   position: relative;
   display: flex;
   justify-content: center;
-  background: no-repeat center bottom url('/images/about/bg-white-about.png');
+  background: no-repeat right 100px bottom -40px url('/images/about/bg-white-about.png');
   height: 316px;
 }
 
 .img {
   position: absolute;
   left: 57px;
-  bottom: -30px;
+  bottom: -75px;
 }

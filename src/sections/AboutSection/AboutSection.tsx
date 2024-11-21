@@ -5,7 +5,16 @@ import Image from 'next/image';
 export default function AboutSection() {
   return (
     <section id='#about' className={styles.aboutUs}>
-      <h2 className={styles.title}>О НАС</h2>
+      <h2 className={styles.title}>
+        О НАС
+        <Image
+          src={'/images/about/orange_light_line.png'}
+          alt='line'
+          width={84}
+          height={17}
+          className={styles.line}
+        />
+      </h2>
       <div className={styles.content}>
         <Image
           src={'/images/about/about-img.png'}
