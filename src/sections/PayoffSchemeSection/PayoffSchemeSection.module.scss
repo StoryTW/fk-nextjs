@@ -1,0 +1,41 @@
+.root {
+  margin-bottom: 64px;
+}
+
+.title {
+  @include OpenSans_36_400;
+  color: var(--black);
+  text-align: center;
+  padding: 20px 0px;
+  position: relative;
+  margin-bottom: 48px;
+
+  .line {
+    position: absolute;
+    bottom: 24px;
+    right: 38%;
+    z-index: -1;
+  }
+}
+
+.content {
+  background: url('/images/payoff/bgs_payment1.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1203px 233px;
+  height: 340px;
+}
+
+.one {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 48px;
+}
+
+.two {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}

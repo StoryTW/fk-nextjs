@@ -29,6 +29,26 @@
   height: 316px;
 }
 
+.list {
+  padding: 80px 200px 0px 430px;
+
+  li {
+    position: relative;
+    list-style: none;
+
+    &::before {
+      position: absolute;
+      content: ' ';
+      left: -20px;
+      top: 4px;
+      background: var(--orange);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+  }
+}
+
 .img {
   position: absolute;
   left: 57px;

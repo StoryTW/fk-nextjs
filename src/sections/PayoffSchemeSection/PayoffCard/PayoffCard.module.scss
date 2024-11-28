@@ -1,0 +1,29 @@
+.card {
+  position: relative;
+  max-width: 430px;
+}
+
+.wrapper {
+  padding: 20px 20px 20px 60px;
+  background: var(--gray-2);
+  border-radius: 20px;
+}
+
+.cirle {
+  position: absolute;
+  left: -16px;
+  top: -20px;
+  background: var(--gray-3);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 31px;
+}
+
+.text {
+  @include OpenSans_18_400;
+  color: var(--white);
+}
