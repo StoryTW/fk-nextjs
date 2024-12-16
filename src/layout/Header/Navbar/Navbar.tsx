@@ -9,6 +9,12 @@ const DATA = [
   {
     name: 'СТАВКА',
     href: '/',
+    dropdown: true,
+    listItems: [
+      {
+
+      }
+    ]
   },
   {
     name: 'НАШИ ПАРТНЕРЫ',
@@ -21,10 +27,12 @@ const DATA = [
   {
     name: 'ИНТЕГРАЦИЯ',
     href: '#integration',
+    dropdown: true,
   },
   {
     name: 'О НАС',
     href: '#about',
+    dropdown: true,
   },
 ];
 
