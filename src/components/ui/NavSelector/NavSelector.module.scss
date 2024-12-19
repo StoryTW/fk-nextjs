@@ -1,0 +1,52 @@
+.root {
+  position: relative;
+}
+
+.trigger {
+  cursor: pointer;
+  padding: 4px 4px 0px;
+  background-color: transparent;
+  @include transition;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: var(--gray);
+  }
+
+  svg {
+    color: var(--black);
+  }
+}
+
+.content {
+  position: absolute;
+  background: var(--white);
+  width: max-content;
+  max-width: 200px;
+  box-shadow: var(--shadow_1);
+  border-radius: 6px;
+  transform: translate(-50%);
+  left: 50%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0px;
+}
+
+.item {
+  background: transparent;
+  padding: 4px 8px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover {
+    background-color: var(--gray);
+  }
+}

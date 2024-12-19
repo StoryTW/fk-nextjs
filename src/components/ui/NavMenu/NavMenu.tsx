@@ -23,60 +23,61 @@ export const NavMenu = () => {
         </Item>
 
         <Item className={styles.item}>
-          <Trigger className={styles.trigger}>
-            СТАВКА
-          </Trigger>
+          <Trigger className={styles.trigger}>СТАВКА</Trigger>
           <Content className={styles.content}>
-            <ul className='List one'>
+            <ul className={styles.list}>
               <ListItem href='https://stitches.dev/' title='Stitches'>
                 CSS-in-JS with best-in-class developer experience.
-              </ListItem>
-              <ListItem href='/colors' title='Colors'>
-                Beautiful, thought-out palettes with auto dark mode.
-              </ListItem>
-              <ListItem href='https://icons.radix-ui.com/' title='Icons'>
-                A crisp set of 15x15 icons, balanced and consistent.
               </ListItem>
             </ul>
           </Content>
         </Item>
 
-        {/* <Item>
-          <Trigger className='NavigationMenuTrigger'>
-            Overview
-          </Trigger>
-          <Content className='NavigationMenuContent'>
-            <ul className='List two'>
-              <ListItem title='Introduction' href='/primitives/docs/overview/introduction'>
-                Build high-quality, accessible design systems and web apps.
-              </ListItem>
-              <ListItem title='Getting started' href='/primitives/docs/overview/getting-started'>
-                A quick tutorial to get you up and running with Radix Primitives.
-              </ListItem>
-              <ListItem title='Styling' href='/primitives/docs/guides/styling'>
-                Unstyled and compatible with any styling solution.
-              </ListItem>
-              <ListItem title='Animation' href='/primitives/docs/guides/animation'>
-                Use CSS keyframes or any animation library of your choice.
-              </ListItem>
-              <ListItem title='Accessibility' href='/primitives/docs/overview/accessibility'>
-                Tested in a range of browsers and assistive technologies.
-              </ListItem>
-              <ListItem title='Releases' href='/primitives/docs/overview/releases'>
-                Radix Primitives releases and their changelogs.
+        <Item className={styles.item}>
+          <Link className={styles.link} href='/'>
+            НАШИ ПАРТНЕРЫ
+          </Link>
+        </Item>
+
+        <Item className={styles.item}>
+          <Link className={styles.link} href='/'>
+            API
+          </Link>
+        </Item>
+
+        <Item className={styles.item}>
+          <Trigger className={styles.trigger}>ИНТЕГРАЦИЯ</Trigger>
+          <Content className={styles.content}>
+            <ul className='List one'>
+              <ListItem href='https://stitches.dev/' title='Stitches'>
+                CSS-in-JS with best-in-class developer experience.
               </ListItem>
             </ul>
           </Content>
-        </Item> */}
+        </Item>
 
-        {/* <Item>
-          <Link className='NavigationMenuLink' href='https://github.com/radix-ui'>
-            Github
-          </Link>
-        </Item> */}
+        <Item className={styles.item}>
+          <Trigger className={styles.trigger}>О НАС</Trigger>
+          <Content className={styles.content} asChild>
+            <ul className={styles.list}>
+              <ListItem href='/'>
+                НАША КОМАНДА
+              </ListItem>
+              <ListItem href='/'>
+                ЖИЗНЬ ПРОЕКТА
+              </ListItem>
+              <ListItem href='/'>
+                НАША КОМАНДА
+              </ListItem>
+              <ListItem href='/'>
+                НАША КОМАНДА
+              </ListItem>
+            </ul>
+          </Content>
+        </Item>
 
-        <Indicator className='NavigationMenuIndicator'>
-          <div className='Arrow' />
+        <Indicator className={styles.indicator}>
+          <div className={styles.arrow} />
         </Indicator>
       </List>
 

@@ -44,13 +44,13 @@ export default function PayoffSchemeSection() {
       </h2>
       <div className={styles.content}>
         <div className={styles.one}>
-          {DATA_1.map((card) => {
-            return <PayoffCard {...card} />;
+          {DATA_1.map((card, index) => {
+            return <PayoffCard key={index} {...card} />;
           })}
         </div>
         <div className={styles.two}>
-          {DATA_2.map((card) => {
-            return <PayoffCard {...card} />;
+          {DATA_2.map((card, index) => {
+            return <PayoffCard key={index} {...card} />;
           })}
         </div>
       </div>

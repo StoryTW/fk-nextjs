@@ -1,50 +1,108 @@
 import React from 'react';
 import styles from './Navbar.module.scss';
+import { NavSelector } from '@/components/ui/NavSelector/NavSelector';
+import { TriggerLink } from './TriggerLink/TriggerLink';
+import { ROUTER } from '@/utils/router';
 
-const DATA = [
-  {
+const DATA = {
+  main: {
     name: 'ГЛАВНАЯ',
-    href: '/',
+    href: ROUTER.MAIN,
   },
-  {
+  stavka: {
     name: 'СТАВКА',
     href: '/',
-    dropdown: true,
-    listItems: [
-      {
-
-      }
-    ]
   },
-  {
+  parners: {
     name: 'НАШИ ПАРТНЕРЫ',
-    href: '#parthers',
+    href: '/',
   },
-  {
+  api: {
     name: 'API',
-    href: '#api',
+    href: '/',
   },
-  {
-    name: 'ИНТЕГРАЦИЯ',
-    href: '#integration',
-    dropdown: true,
+  integration: {
+    title: 'ИНТЕГРАЦИЯ',
+    options: [
+      {
+        name: 'Инструкции по API',
+        href: '/',
+      },
+      {
+        name: 'Инструкции по панели управления',
+        href: '/',
+      },
+      {
+        name: 'Гарантии',
+        href: ROUTER.GUARANTEES,
+      },
+      {
+        name: 'Заявки на подключение',
+        href: '/',
+      },
+      {
+        name: 'Соглашение о приеме платежей',
+        href: '/',
+      },
+      {
+        name: 'Правила работы сервиса',
+        href: '/',
+      },
+      {
+        name: 'Политика AML',
+        href: '/',
+      },
+      {
+        name: 'Политика KYC',
+        href: '/',
+      },
+    ],
   },
-  {
-    name: 'О НАС',
-    href: '#about',
-    dropdown: true,
+  about: {
+    title: 'О НАС',
+    options: [
+      {
+        name: 'API',
+        href: '/',
+      },
+      {
+        name: 'ЖИЗНЬ ПРОЕКТА',
+        href: '/',
+      },
+      {
+        name: 'НОВОСТИ ПРОЕКТА',
+        href: '/',
+      },
+      {
+        name: 'КОНТАКТЫ',
+        href: '/',
+      },
+    ],
   },
-];
+};
 
 export const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <ul className={styles.list}>
-        {DATA.map((item, index) => {
-          return (
-            <li key={index} className={styles.item}>{item.name}</li>
-          )
-        })}
+        <li>
+          <TriggerLink title={DATA.main.name} href={DATA.main.href} />
+        </li>
+        <li>
+          <TriggerLink title={DATA.stavka.name} href={DATA.stavka.href} />
+        </li>
+        <li>
+          <TriggerLink title={DATA.parners.name} href={DATA.parners.href} />
+        </li>
+        <li>
+          <TriggerLink title={DATA.api.name} href={DATA.api.href} />
+        </li>
+        <li>
+          <NavSelector title={DATA.integration.title} options={DATA.integration.options} />
+        </li>
+        <li>
+          <NavSelector title={DATA.about.title} options={DATA.about.options} />
+        </li>
       </ul>
     </nav>
   );
