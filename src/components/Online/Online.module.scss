@@ -37,6 +37,13 @@
 
   .description {
     @include OpenSans_18_400;
-    color: var(--gray);
+
+    &.gray {
+      color: var(--gray);
+    }
+
+    &.black {
+      color: var(--black);
+    }
   }
 }
