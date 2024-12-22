@@ -31,7 +31,7 @@ const DATA = [
     image: '/images/our-team/vladimir.png',
     width: 246,
     height: 262,
-    description: 'Технический директор sbercore. Главный по back-edn p2p',
+    description: 'Технический директор sbercore. Главный по back-end p2p',
   },
   {
     name: 'Мария Белова',

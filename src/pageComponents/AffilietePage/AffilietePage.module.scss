@@ -1,0 +1,56 @@
+.root {
+  margin-bottom: 24px;
+  height: 100vh;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title {
+    position: relative;
+    text-align: center;
+    @include OpenSans_30_400;
+    color: var(--black);
+    z-index: 2;
+
+    .line {
+      position: absolute;
+      bottom: 0px;
+      right: -20px;
+      z-index: -1;
+    }
+  }
+}
+
+.online {
+  margin-right: 100px;
+}
+
+.wrapper {
+  background: url('/images/affilitete/bg_af.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-top: 48px;
+  height: 100%;
+}
+
+.short {
+  @include OpenSans_18_400;
+  padding-left: 200px;
+  margin-bottom: 84px;
+  color: var(--black);
+}
+
+.long {
+  @include OpenSans_18_400;
+  padding-left: 320px;
+  margin-bottom: 84px;
+  color: var(--black);
+}
+
+.socials {
+  margin-right: 100px;
+  margin-top: 80px;
+}
