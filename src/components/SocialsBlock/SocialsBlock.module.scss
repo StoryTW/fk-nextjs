@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.text {
+  @include OpenSans_18_400;
+  color: var(--black);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.link {
+  @include transition;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

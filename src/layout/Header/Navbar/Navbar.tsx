@@ -15,67 +15,67 @@ const DATA = {
   },
   parners: {
     name: 'НАШИ ПАРТНЕРЫ',
-    href: '/',
+    href: ROUTER.PARTNERS,
   },
   api: {
     name: 'API',
-    href: '/',
+    href: ROUTER.API,
   },
   integration: {
     title: 'ИНТЕГРАЦИЯ',
     options: [
-      {
-        name: 'Инструкции по API',
-        href: '/',
-      },
-      {
-        name: 'Инструкции по панели управления',
-        href: '/',
-      },
+      // {
+      //   name: 'Инструкции по API',
+      //   href: '/',
+      // },
+      // {
+      //   name: 'Инструкции по панели управления',
+      //   href: '/',
+      // },
       {
         name: 'Гарантии',
         href: ROUTER.GUARANTEES,
       },
-      {
-        name: 'Заявки на подключение',
-        href: '/',
-      },
-      {
-        name: 'Соглашение о приеме платежей',
-        href: '/',
-      },
-      {
-        name: 'Правила работы сервиса',
-        href: '/',
-      },
-      {
-        name: 'Политика AML',
-        href: '/',
-      },
-      {
-        name: 'Политика KYC',
-        href: '/',
-      },
+      // {
+      //   name: 'Заявки на подключение',
+      //   href: '/',
+      // },
+      // {
+      //   name: 'Соглашение о приеме платежей',
+      //   href: '/',
+      // },
+      // {
+      //   name: 'Правила работы сервиса',
+      //   href: '/',
+      // },
+      // {
+      //   name: 'Политика AML',
+      //   href: '/',
+      // },
+      // {
+      //   name: 'Политика KYC',
+      //   href: '/',
+      // },
     ],
   },
   about: {
     title: 'О НАС',
     options: [
-      {
-        name: 'API',
-        href: '/',
-      },
+      // {
+      //   name: 'API',
+      //   href: ROUTER.API,
+      // },
       {
         name: 'ЖИЗНЬ ПРОЕКТА',
-        href: '/',
+        href: ROUTER.PROJECT_LIFE,
       },
       {
         name: 'НОВОСТИ ПРОЕКТА',
-        href: '/',
+        href: ROUTER.PROJECT_NEWS,
       },
       {
         name: 'КОНТАКТЫ',
-        href: '/',
+        href: ROUTER.CONTACTS,
       },
     ],
   },
