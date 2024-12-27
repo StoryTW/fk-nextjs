@@ -9,4 +9,9 @@
     width: 311px;
     height: 75px;
   }
+
+  @include respond(mobileL) {
+    width: 230px;
+    height: 54px;
+  }
 }

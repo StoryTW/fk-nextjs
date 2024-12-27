@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from 'motion/react';
 import { DATA_NAVBAR } from '@/layout/Header/Navbar/Navbar';
 import { OnlineMobile } from '../OnlineMobile/OnlineMobile';
 import { NavSelectorClick } from '../ui/NavSelectorClick/NavSelectorClick';
+import { RemoveScroll } from 'react-remove-scroll';
+import { NavTriggerMob } from '../ui/NavTriggerMob/NavTriggerMob';
 
 const variant = {
   show: {
@@ -24,36 +26,54 @@ export const Burger = () => {
   return (
     <div className={styles.root}>
       <button className={styles.trigger} type='button' tabIndex={-1} onClick={toggleMenu}>
-        <Image src={'/images/menu.png'} alt='menu' width={54} height={54} />
+        <Image src={'/images/menu.png'} alt='menu' width={54} height={54} className={styles.img} />
       </button>
 
       <AnimatePresence mode='wait'>
         {openMenu && (
-          <motion.div
-            variants={variant}
-            initial={'hide'}
-            animate={'show'}
-            exit={'hide'}
-            className={styles.content}
-            transition={{
-              duration: 0.3,
-              bounce: false,
-            }}
-          >
-            <div className={styles.contentWrapper}>
-              <div className={styles.online}>
-                <OnlineMobile />
-              </div>
-              <NavSelectorClick
-                title={DATA_NAVBAR.about.title}
-                options={DATA_NAVBAR.about.options}
-              />
-              <NavSelectorClick
-                title={DATA_NAVBAR.about.title}
-                options={DATA_NAVBAR.about.options}
-              />
-            </div>
-          </motion.div>
+          <RemoveScroll>
+            <motion.div
+              variants={variant}
+              initial={'hide'}
+              animate={'show'}
+              exit={'hide'}
+              className={styles.content}
+              transition={{
+                duration: 0.3,
+                bounce: false,
+              }}
+            >
+              <ul className={styles.contentWrapper}>
+                <li className={styles.online}>
+                  <OnlineMobile />
+                </li>
+                <li className={styles.item}>
+                  <NavTriggerMob title={DATA_NAVBAR.main.name} href={DATA_NAVBAR.main.href} />
+                </li>
+                <li className={styles.item}>
+                  <NavTriggerMob title={DATA_NAVBAR.stavka.name} href={DATA_NAVBAR.stavka.href} />
+                </li>
+                <li className={styles.item}>
+                  <NavTriggerMob title={DATA_NAVBAR.parners.name} href={DATA_NAVBAR.parners.href} />
+                </li>
+                <li className={styles.item}>
+                  <NavTriggerMob title={DATA_NAVBAR.api.name} href={DATA_NAVBAR.api.href} />
+                </li>
+                <li className={styles.item}>
+                  <NavSelectorClick
+                    title={DATA_NAVBAR.integration.title}
+                    options={DATA_NAVBAR.integration.options}
+                  />
+                </li>
+                <li className={styles.item}>
+                  <NavSelectorClick
+                    title={DATA_NAVBAR.about.title}
+                    options={DATA_NAVBAR.about.options}
+                  />
+                </li>
+              </ul>
+            </motion.div>
+          </RemoveScroll>
         )}
       </AnimatePresence>
     </div>
