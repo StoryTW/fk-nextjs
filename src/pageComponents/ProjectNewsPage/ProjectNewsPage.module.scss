@@ -3,10 +3,21 @@
   background-repeat: no-repeat;
   background-position: center center;
   height: 100vh;
+
+  @include respond(tabletL) {
+    background: url('/images/project-life/notebook_tablet.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
 }
 
 .online {
   margin-right: 100px;
+
+  @include respond(tabletL) {
+    display: none !important;
+  }
 }
 
 .wrapper {
