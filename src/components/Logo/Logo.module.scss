@@ -1,0 +1,12 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  @include respond(tabletL) {
+    width: 311px;
+    height: 75px;
+  }
+}

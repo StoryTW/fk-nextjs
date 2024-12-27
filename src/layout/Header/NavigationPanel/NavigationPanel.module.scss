@@ -1,10 +1,10 @@
-.panel {
-
-}
-
 .wrapper {
   padding: 40px 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include respond(tabletL) {
+    padding: 4px 24px;
+  }
 }

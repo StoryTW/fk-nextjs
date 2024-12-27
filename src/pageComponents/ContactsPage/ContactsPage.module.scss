@@ -3,25 +3,58 @@
   background-repeat: no-repeat;
   background-position: left center;
   margin-bottom: 24px;
+
+  @include respond(tabletL) {
+    background-position: right center;
+  }
+  margin-top: 100px;
 }
 
 .online {
   margin-right: 100px;
+
+  @include respond(tabletL) {
+    display: none !important;
+  }
 }
 
 .wrapper {
   padding: 0px 260px;
   display: flex;
+  justify-content: center;
   gap: 186px;
+
+  @include respond(tabletL) {
+    padding: 0px 84px;
+    gap: 48px;
+  }
+
+  @include respond(tabletSM) {
+    flex-direction: column;
+    padding: 0px 48px;
+  }
 }
 
 .list {
   display: flex;
   flex-direction: column;
   gap: 44px;
+
+  @include respond(tabletSM) {
+    gap: 24px;
+  }
 }
 
 .socials {
   margin-right: 100px;
   margin-top: 80px;
+
+
+  @include respond(tabletL) {
+    margin-right: 84px;
+  }
+
+  @include respond(tabletSM) {
+    margin-right: 48px;
+  }
 }

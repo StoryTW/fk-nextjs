@@ -1,0 +1,49 @@
+.root {
+  position: relative;
+  width: 100%;
+}
+
+.trigger {
+  cursor: pointer;
+  padding: 16px 20px;
+  background-color: var(--gray);
+  @include transition;
+  border-radius: 16px;
+  text-transform: uppercase;
+  text-align: start;
+  color: var(--black);
+  width: 100%;
+
+  &:focus {
+    background-color: var(--gray);
+  }
+}
+
+.content {
+  // position: absolute;
+  // background: var(--white);
+  // width: max-content;
+  // max-width: 200px;
+  // box-shadow: var(--shadow_1);
+  // border-radius: 6px;
+  // transform: translate(-50%);
+  // left: 50%;
+  // z-index: 10;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0px;
+}
+
+.item {
+  background: transparent;
+  padding: 4px 8px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover {
+    background-color: var(--gray);
+  }
+}

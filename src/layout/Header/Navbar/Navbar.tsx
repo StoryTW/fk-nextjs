@@ -4,7 +4,7 @@ import { NavSelector } from '@/components/ui/NavSelector/NavSelector';
 import { TriggerLink } from './TriggerLink/TriggerLink';
 import { ROUTER } from '@/utils/router';
 
-const DATA = {
+export const DATA_NAVBAR = {
   main: {
     name: 'ГЛАВНАЯ',
     href: ROUTER.MAIN,
@@ -86,22 +86,22 @@ export const Navbar = () => {
     <nav className={styles.navbar}>
       <ul className={styles.list}>
         <li>
-          <TriggerLink title={DATA.main.name} href={DATA.main.href} />
+          <TriggerLink title={DATA_NAVBAR.main.name} href={DATA_NAVBAR.main.href} />
         </li>
         <li>
-          <TriggerLink title={DATA.stavka.name} href={DATA.stavka.href} />
+          <TriggerLink title={DATA_NAVBAR.stavka.name} href={DATA_NAVBAR.stavka.href} />
         </li>
         <li>
-          <TriggerLink title={DATA.parners.name} href={DATA.parners.href} />
+          <TriggerLink title={DATA_NAVBAR.parners.name} href={DATA_NAVBAR.parners.href} />
         </li>
         <li>
-          <TriggerLink title={DATA.api.name} href={DATA.api.href} />
+          <TriggerLink title={DATA_NAVBAR.api.name} href={DATA_NAVBAR.api.href} />
         </li>
         <li>
-          <NavSelector title={DATA.integration.title} options={DATA.integration.options} />
+          <NavSelector title={DATA_NAVBAR.integration.title} options={DATA_NAVBAR.integration.options} />
         </li>
         <li>
-          <NavSelector title={DATA.about.title} options={DATA.about.options} />
+          <NavSelector title={DATA_NAVBAR.about.title} options={DATA_NAVBAR.about.options} />
         </li>
       </ul>
     </nav>

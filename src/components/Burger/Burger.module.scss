@@ -1,0 +1,36 @@
+.root {
+  display: none;
+  position: relative;
+
+  @include respond(tabletL) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  position: fixed;
+  top: 83px;
+  right: 0;
+  background-color: var(--white);
+  width: 100%;
+  max-width: 480px;
+  // box-shadow: var(--shadow_3);
+}
+
+.contentWrapper {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.online {
+  margin-bottom: 24px;
+}

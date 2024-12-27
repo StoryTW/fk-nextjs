@@ -1,6 +1,10 @@
 .header {
   position: relative;
 
+  @include respond(tabletL) {
+    box-shadow: var(--shadow_2);
+  }
+
   .wrapper {
     margin: 0 auto;
     width: 1324px;

@@ -3,6 +3,16 @@
   position: relative;
   background-color: transparent;
   background: no-repeat center bottom url('/images/bgs_Footer.png');
+
+  @include respond(laptop) {
+    height: 500px;
+    background: no-repeat center bottom url('/images/bgs_footer_tablet.png');
+  }
+
+  @include respond(tabletSM) {
+    height: 866px;
+    background: no-repeat center bottom url('/images/bgs_footer_mob.png');
+  }
 }
 
 .wrapper {
@@ -10,6 +20,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
+
+  @include respond(laptopB) {
+    padding: 110px 80px 60px;
+  }
+
+  @include respond(tabletSM) {
+    flex-direction: column;
+    justify-content: start;
+    padding: 110px 48px 60px;
+  }
 }
 
 .nav {
@@ -22,7 +43,24 @@
   grid-template-columns: 1fr 1fr;
   gap: 16px 64px;
 
+  @include respond(laptopB) {
+    gap: 16px;
+  }
+
+  @include respond(laptop) {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  @include respond(tabletSM) {
+    margin-bottom: 80px;
+  }
+
   .item {
+    @include respond(tabletSM) {
+      text-align: center;
+    }
+
     a {
       @include OpenSans_18_400;
       color: var(--white);
@@ -30,6 +68,10 @@
 
       &:hover {
         text-decoration: underline;
+      }
+
+      @include respond(laptop) {
+        font-size: 18px;
       }
     }
   }
@@ -39,4 +81,12 @@
   @include OpenSans_18_400;
   font-size: 16px;
   color: var(--white);
+
+  @include respond(laptop) {
+    font-size: 18px;
+  }
+
+  @include respond(tabletSM) {
+    text-align: center;
+  }
 }
