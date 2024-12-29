@@ -1,0 +1,33 @@
+.root {
+  padding: 64px;
+  background-color: var(--gray-7);
+}
+
+.title {
+  @include OpenSans_36_400;
+  color: var(--black);
+  text-align: center;
+  padding: 20px 0px;
+  position: relative;
+  margin-bottom: 48px;
+
+  .line {
+    position: absolute;
+    bottom: 24px;
+    right: 38%;
+  }
+}
+
+.payform {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+
+  .leftSide {
+    display: flex;
+    align-items: center;
+
+    .titleBlock {
+    }
+  }
+}
