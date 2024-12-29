@@ -24,14 +24,14 @@ export const MainPage = () => {
     <>
       <Header />
       <main className='container'>
-        <ClientsSection />
+        {/* <ClientsSection />
         <HistorySection />
         <RulesSection />
         <ConditionSection />
-        <PayoffSchemeSection />
+        <PayoffSchemeSection /> */}
         <AcquiringSection />
-        <AboutSection />
-        <OurTeam />
+        {/* <AboutSection />
+        <OurTeam /> */}
       </main>
     </>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './AcquiringSection.module.scss';
 import Image from 'next/image';
+import { FormPay } from './FormPay/FormPay';
 
 const DATA = [
   {
@@ -40,14 +41,18 @@ export default function AcquiringSection() {
       <div className={styles.content}></div>
       <div className={styles.payform}>
         <div className={styles.leftSide}>
-          <div className={styles.titleBlock}>
-            ФОРМА ОПЛАТЫ
-          </div>
-          <div>
-
-          </div>
+          <div className={styles.titleBlock}>ФОРМА ОПЛАТЫ</div>
+          <Image
+            src={'/images/bgs_linear-paymove.png'}
+            alt='arrow'
+            width={62}
+            height={64}
+            className={styles.imgArrow}
+          />
         </div>
-        <div className={styles.rightSide}></div>
+        <div className={styles.rightSide}>
+          <FormPay />
+        </div>
       </div>
     </section>
   );
