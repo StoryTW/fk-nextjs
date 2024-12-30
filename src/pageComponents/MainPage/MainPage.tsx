@@ -23,12 +23,12 @@ export const MainPage = () => {
       <Header />
       <main className='container'>
         <ClientsSection />
-        <HistorySection />
+        {/* <HistorySection />
         <RulesSection />
         <ConditionSection />
         <PayoffSchemeSection />
         <AboutSection />
-        <OurTeam />
+        <OurTeam /> */}
       </main>
     </>
   );
