@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ClientsSection.module.scss';
+import styles from './BetSection.module.scss';
 import Image from 'next/image';
 
 const liMassive = [
