@@ -18,6 +18,8 @@ const PayoffSchemeSection = dynamic(
 );
 const ClientsSection = dynamic(() => import('@/sections/ClientsSection/ClientsSection'));
 
+const AcquiringSection = dynamic(() => import('@/sections/AcquiringSection/AcquiringSection'));
+
 export const MainPage = () => {
   return (
     <>
@@ -29,6 +31,7 @@ export const MainPage = () => {
         <RulesSection />
         <ConditionSection />
         <PayoffSchemeSection />
+        <AcquiringSection />
         <AboutSection />
         <OurTeam />
       </main>

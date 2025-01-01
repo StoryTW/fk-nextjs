@@ -1,0 +1,75 @@
+.root {
+  padding: 64px;
+  background-color: var(--gray-7);
+}
+
+.title {
+  @include OpenSans_36_400;
+  color: var(--black);
+  text-align: center;
+  padding: 20px 0px;
+  position: relative;
+  margin-bottom: 48px;
+
+  @include respond(mobileL) {
+    font-size: 24px;
+    margin-bottom: 36px;
+  }
+
+  .line {
+    position: absolute;
+    bottom: 24px;
+    right: 38%;
+    pointer-events: none;
+
+    @include respond(mobileL) {
+      right: -10%;
+    }
+  }
+}
+
+.payform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width: 950px) {
+    flex-direction: column;
+  }
+
+  .leftSide {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 950px) {
+      margin-bottom: 24px;
+    }
+
+    .titleBlock {
+      padding: 16px 24px;
+      background: var(--white);
+      border-radius: 8px;
+      @include OpenSans_24_400;
+      color: var(--black);
+      box-shadow: var(--shadow_2);
+      margin-right: 16px;
+      text-align: center;
+
+      @media only screen and (max-width: 950px) {
+        margin-bottom: 24px;
+        margin-right: 0px;
+      }
+
+      @include respond(mobileL) {
+        font-size: 18px;
+        padding: 12px 16px;
+      }
+    }
+
+    .imgArrow {
+      @media only screen and (max-width: 950px) {
+        display: none;
+      }
+    }
+  }
+}
