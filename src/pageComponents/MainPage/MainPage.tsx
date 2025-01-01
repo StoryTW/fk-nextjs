@@ -1,4 +1,5 @@
 import { Header } from '@/layout/Header/Header';
+import BetSection from '@/sections/BetSection/BetSection';
 import dynamic from 'next/dynamic';
 import React from 'react';
 
@@ -24,6 +25,7 @@ export const MainPage = () => {
     <>
       <Header />
       <main className='container'>
+        <BetSection />
         <ClientsSection />
         <HistorySection />
         <RulesSection />

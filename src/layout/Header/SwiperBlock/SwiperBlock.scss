@@ -1,0 +1,31 @@
+.swiper {
+  height: 520px;
+  @include respond(tabletL) {
+    height: auto;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--white);
+  @include respond(tabletL) {
+    color: var(--orange);
+  }
+}
+
+.swiper-pagination-bullet {
+  background: none;
+  border: 2px solid var(--white);
+  @include respond(tabletL) {
+    border-color: var(--orange);
+  }
+  width: 10px;
+  height: 10px;
+  transition: 0.3s all;
+}
+
+.swiper-pagination-bullet-active {
+  border-color: var(--white);
+  width: 12px;
+  height: 12px;
+}

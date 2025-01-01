@@ -3,6 +3,10 @@
   position: relative;
   background: no-repeat center bottom url('/images/bgs_header.png');
 
+  @include respond(tabletL) {
+    height: 1100px;
+    background: none;
+  }
   .wrapper {
     margin: 0 auto;
     width: 1324px;
