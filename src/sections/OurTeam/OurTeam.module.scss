@@ -1,9 +1,9 @@
 .ourTeam {
   padding-bottom: 80px;
   position: relative;
-  background: 
+  background:
     no-repeat top right url('/images/our-team/bgs_logo.png'),
-    no-repeat bottom -30px right url('/images/our-team/bgs_logo_2.png'),
+    no-repeat bottom -30px right url('/images/our-team/bgs_logo_2.png');
 }
 
 .title {
@@ -24,15 +24,22 @@
 
 .content {
   padding: 0px 200px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(280px, 280px));
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 48px 0px;
+  @include respond(laptop) {
+    justify-content: center;
+    padding: 0 20px;
+  }
+  gap: 48px;
   margin-bottom: 48px;
 }
 
 .info {
   padding: 0px 200px;
+  @include respond(laptop) {
+    padding: 0 50px;
+  }
   @include OpenSans_21_400;
   color: var(--black);
   margin-bottom: 56px;
@@ -41,14 +48,20 @@
 .contacts {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-between;
   padding: 0px 200px;
+  @include respond(laptop) {
+    padding: 0 50px;
+  }
 }
 
 .socials {
   .item_one {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 36px;
 
     .name {
@@ -76,6 +89,7 @@
   .item_two {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     .name {
       @include OpenSans_18_400;

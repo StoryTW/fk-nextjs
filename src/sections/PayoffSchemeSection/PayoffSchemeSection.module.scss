@@ -1,5 +1,6 @@
 .root {
   margin-bottom: 64px;
+  padding: 0 20px;
 }
 
 .title {
@@ -24,6 +25,11 @@
   background-position: center center;
   background-size: 1203px 233px;
   height: 340px;
+
+  @include respond(laptopL) {
+    height: auto;
+    background: none;
+  }
 }
 
 .one {
@@ -32,10 +38,28 @@
   align-items: center;
   gap: 100px;
   margin-bottom: 48px;
+
+  @include respond(laptopL) {
+    display: none;
+  }
 }
 
 .two {
   display: flex;
   justify-content: center;
   gap: 100px;
+
+  @include respond(laptopL) {
+    display: none;
+  }
+}
+
+.tablet {
+  display: none;
+
+  @include respond(laptopL) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }

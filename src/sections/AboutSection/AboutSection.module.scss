@@ -2,6 +2,11 @@
   height: 774px;
   position: relative;
   background: no-repeat center bottom url('/images/bgs_section_about.png');
+
+  @include respond(laptop) {
+    background: none;
+    height: auto;
+  }
 }
 
 .title {
@@ -27,10 +32,21 @@
   justify-content: center;
   background: no-repeat right 100px bottom -40px url('/images/about/bg-white-about.png');
   height: 316px;
+
+  @include respond(laptop) {
+    background: none;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .list {
   padding: 80px 200px 0px 430px;
+
+  @include respond(laptop) {
+    padding: 40px;
+  }
 
   li {
     position: relative;
@@ -53,4 +69,10 @@
   position: absolute;
   left: 57px;
   bottom: -75px;
+
+  @include respond(laptop) {
+    position: static;
+    height: 350px;
+    width: 300px;
+  }
 }

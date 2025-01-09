@@ -29,6 +29,29 @@ const DATA_2 = [
   },
 ];
 
+const DATA_TABLET = [
+  {
+    order: '1',
+    text: 'Клиент желает совершить обмен со сторонней системы или криптовалюты на фиат (карта, кошелек). Он создает заявку-ордер у вас на сайте или через биржу.',
+  },
+  {
+    order: '2',
+    text: 'Вы выдаете клиенту реквизит для оплаты.',
+  },
+  {
+    order: '3',
+    text: 'Клиент совершат оплату по вашим реквизитам',
+  },
+  {
+    order: '4',
+    text: 'Вы получаете от клиента карту или кошелек для выплаты и передаете в firekassa (через апи или интерфейс) в запросе на выплату.',
+  },
+  {
+    order: '5',
+    text: 'Firekassa переводит денежные средства вашему клиенту и передает уведомление об успешной выплате.',
+  },
+];
+
 export default function PayoffSchemeSection() {
   return (
     <section className={styles.root}>
@@ -50,6 +73,11 @@ export default function PayoffSchemeSection() {
         </div>
         <div className={styles.two}>
           {DATA_2.map((card, index) => {
+            return <PayoffCard key={index} {...card} />;
+          })}
+        </div>
+        <div className={styles.tablet}>
+          {DATA_TABLET.map((card, index) => {
             return <PayoffCard key={index} {...card} />;
           })}
         </div>
