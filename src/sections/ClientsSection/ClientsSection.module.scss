@@ -1,127 +1,124 @@
 .root {
+  padding: 0 98px;
+  @include respond(laptopL) {
+    padding: 0 20px;
+  }
 
-    padding: 0 98px;
+  .head {
+    .title {
+      @include OpenSans_36_400;
+      color: var(--black);
+      text-align: center;
+      padding: 20px 0px;
+      position: relative;
+      margin-bottom: 16px;
+      text-transform: uppercase;
 
-    .head {
+      .line {
+        position: absolute;
+        bottom: 22px;
+        right: 34%;
+        z-index: -1;
+      }
+    }
+  }
 
-        .title {
-            @include OpenSans_36_400;
-            color: var(--black);
-            text-align: center;
-            padding: 20px 0px;
-            position: relative;
-            margin-bottom: 16px;
-            text-transform: uppercase;
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
 
-            .line {
-                position: absolute;
-                bottom: 22px;
-                right: 34%;
-                z-index: -1;
-            }
-        }
+    @include respond(tabletS) {
+      place-items: center;
     }
 
-    .wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 2rem;
-        padding: 0 2rem;
+    .item {
+      display: flex;
+      flex-direction: column;
 
-        @include respond(tabletS) {
-            place-items: center;
+      max-width: 280px;
+
+      .head {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 24px;
+        max-width: fit-content;
+        margin: 0 auto;
+
+        .paragraph {
+          @include OpenSans_24_400;
+          color: var(--black);
+          margin-bottom: 24px;
+          text-transform: uppercase;
+          z-index: 2;
         }
 
+        .hexagon {
+          position: absolute;
+          top: -3px;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+      .contentCrypto {
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+
+        .itemCrypto:nth-child(2) {
+          display: flex;
+          justify-content: end;
+          margin-right: 70px;
+        }
+
+        .itemCrypto:nth-child(3) {
+          display: flex;
+          justify-content: start;
+          margin-left: 30px;
+        }
+
+        .itemCrypto:nth-child(4) {
+          display: flex;
+          justify-content: end;
+          margin-right: 50px;
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 42px;
 
         .item {
-
-            display: flex;
-            flex-direction: column;
-
-            max-width: 280px;
-
-            .head {
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-bottom: 24px;
-                max-width: fit-content;
-                margin: 0 auto;
-
-                .paragraph {
-                    @include OpenSans_24_400;
-                    color: var(--black);
-                    margin-bottom: 24px;
-                    text-transform: uppercase;
-                    z-index: 2;
-                }
-
-                .hexagon {
-                    position: absolute;
-                    top: -3px;
-                    left: 0;
-                    z-index: -1;
-                }
-            }
-
-            .contentCrypto {
-                display: flex;
-                flex-direction: column;
-                gap: 56px;
-
-                .itemCrypto:nth-child(2) {
-                    display: flex;
-                    justify-content: end;
-                    margin-right: 70px;
-                }
-
-                .itemCrypto:nth-child(3) {
-                    display: flex;
-                    justify-content: start;
-                    margin-left: 30px;
-                }
-
-                .itemCrypto:nth-child(4) {
-                    display: flex;
-                    justify-content: end;
-                    margin-right: 50px;
-                }
-            }
-
-            .content {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                margin-bottom: 42px;
-
-                .item {
-                    display: flex;
-                    width: 100%;
-                    flex-direction: row;
-                    justify-content: center;
-                    margin-bottom: 24px;
-                    gap: 20px;
-                    align-items: center;
-                }
-
-                .clientColumns {
-                    display: flex;
-                    justify-content: space-between;
-                    width: 100%;
-
-                    .clientList {
-                        list-style: none;
-                        padding: 0;
-                        margin: 0;
-
-                    }
-                }
-
-            }
+          display: flex;
+          width: 100%;
+          flex-direction: row;
+          justify-content: center;
+          margin-bottom: 24px;
+          gap: 20px;
+          align-items: center;
         }
+
+        .clientColumns {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+
+          .clientList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
     }
+  }
 }
