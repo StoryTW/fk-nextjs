@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
 import { Header } from '@/layout/Header/Header';
 import { Footer } from '@/layout/Footer/Footer';
-import '@/assets/styles/index.scss'
+import '@/assets/styles/index.scss';
+import { Providers } from '@/providers/Provider';
 
 type RootLayoutType = Readonly<{
   children: React.ReactNode;
@@ -23,8 +24,10 @@ export default function RootLayout({ children }: RootLayoutType) {
   return (
     <html lang='ru'>
       <body className={openSans.className}>
-        {children}
-        <Footer/>
+        <Providers>
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
