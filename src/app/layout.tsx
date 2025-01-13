@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
-import { Header } from '@/layout/Header/Header';
 import { Footer } from '@/layout/Footer/Footer';
-import '@/assets/styles/index.scss'
+import '@/assets/styles/index.scss';
 
 type RootLayoutType = Readonly<{
   children: React.ReactNode;
@@ -24,7 +23,7 @@ export default function RootLayout({ children }: RootLayoutType) {
     <html lang='ru'>
       <body className={openSans.className}>
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

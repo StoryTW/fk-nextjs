@@ -65,17 +65,23 @@ export default function AcquiringSection() {
       <div className={styles.content}>
         <div className={styles.up}>
           {DATA_UP.map((item) => (
-            <div className={styles.item}>{item.text}</div>
+            <div className={styles.item} key={item.text}>
+              {item.text}
+            </div>
           ))}
         </div>
         <div className={styles.down}>
           {DATA_DOWN.map((item) => (
-            <div className={styles.item}>{item.text}</div>
+            <div className={styles.item} key={item.text}>
+              {item.text}
+            </div>
           ))}
         </div>
         <div className={styles.all}>
           {DATA.map((item) => (
-            <div className={styles.item}>{item.text}</div>
+            <div className={styles.item} key={item.text}>
+              {item.text}
+            </div>
           ))}
         </div>
       </div>
