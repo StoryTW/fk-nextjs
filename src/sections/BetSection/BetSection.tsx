@@ -1,29 +1,200 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import styles from './BetSection.module.scss';
 import Image from 'next/image';
-
-const liMassive = [
-  'Тип вашего проекта',
-  'Сайт и репутация',
-  'Наличие юридической конструкции',
-  'Уровень риска чарджбеков и жалоб',
-  'Уровень риска запросов от правоохранительных органов и уголовных дел',
-  'Уровень риска запросов от регулирующих органов',
-  'Месячный оборот проекта',
-  'Колво платежей в месяц',
-  'Средний чек',
-  'Необходимость лицензирования деятельности',
-  'Возраст проекта',
-];
-
-const liMassive2 = [
-  'Кол-во подключенных проектов в нише',
-  'Наш уровень жадности',
-  'Конкуренция',
-  'Продолжительность сотрудничества',
-];
+import { liMassive, liMassive2, tableData } from './data';
 
 export default function BetSection() {
+  const [countMounth, setCountMounth] = useState<number>(0);
+  const [url, setUrl] = useState<string>('');
+  const [type, setType] = useState<string>(tableData[0].typeProject);
+  const [betAquaring, setBetAquaring] = useState<string>('5,3 - 6,5%');
+  const [betApi, setBetApi] = useState<string>('5,3 - 4,7%');
+
+  const handleClickButton = () => {
+    switch (type) {
+      case 'Обменник':
+        if (countMounth === 0 && countMounth <= 1000000) {
+          if (url) {
+            setBetAquaring('5,2 - 6,3%');
+            setBetApi('5,2 - 4,7%');
+          } else {
+            setBetAquaring('5,3 - 6,5%');
+            setBetApi('5,3 - 4,7%');
+          }
+        }
+        if (countMounth === 1000000 && countMounth <= 10000000) {
+          if (url) {
+            setBetAquaring('5,1 - 6%');
+            setBetApi('5 - 4,5%');
+          } else {
+            setBetAquaring('5,2 - 6,3%');
+            setBetApi('5,2 - 4,5%');
+          }
+        }
+        if (countMounth === 10000000 && countMounth <= 100000000) {
+          if (url) {
+            setBetAquaring('5,0 - 5,9%');
+            setBetApi('4,8 - 4,3%');
+          } else {
+            setBetAquaring('5,1 - 6%');
+            setBetApi('5 - 4,4%');
+          }
+        }
+        if (countMounth >= 100000000) {
+          if (url) {
+            setBetAquaring('4,9 - 6,0%');
+            setBetApi('4,8 - 4,2%');
+          } else {
+            setBetAquaring('5,0 - 5,9%');
+            setBetApi('4,8 - 4,3%');
+          }
+        }
+        break;
+
+      case 'Криптовалютная биржа':
+        if (countMounth === 0 && countMounth <= 1000000) {
+          if (url) {
+            setBetAquaring('5,2 - 6,3%');
+            setBetApi('5,2 - 4,5%');
+          } else {
+            setBetAquaring('5,3 - 6,5%');
+            setBetApi('5,3 - 4,5%');
+          }
+        }
+        if (countMounth === 1000000 && countMounth <= 10000000) {
+          if (url) {
+            setBetAquaring('5,1 - 6%');
+            setBetApi('5 - 4,4%');
+          } else {
+            setBetAquaring('5,2 - 6,3%');
+            setBetApi('5,2 - 4,5%');
+          }
+        }
+        if (countMounth === 10000000 && countMounth <= 100000000) {
+          if (url) {
+            setBetAquaring('5,0 - 5,9%');
+            setBetApi('4,8 - 4,3%');
+          } else {
+            setBetAquaring('5,1 - 6%');
+            setBetApi('5 - 4,4%');
+          }
+        }
+        if (countMounth >= 100000000) {
+          if (url) {
+            setBetAquaring('4,9 - 6,0%');
+            setBetApi('4,8 - 4,2%');
+          } else {
+            setBetAquaring('5,0 - 5,9%');
+            setBetApi('4,8 - 4,3%');
+          }
+        }
+        break;
+
+      case 'Электронный кошелек':
+        if (countMounth === 0 && countMounth <= 1000000) {
+          if (url) {
+            setBetAquaring('6,6 - 8,6%');
+            setBetApi('6,8 - 6,0%');
+          } else {
+            setBetAquaring('6,6 - 8,4%');
+            setBetApi('6,7 - 5,9%');
+          }
+        }
+        if (countMounth === 1000000 && countMounth <= 10000000) {
+          if (url) {
+            setBetAquaring('6,5 - 8,3%');
+            setBetApi('6,6 - 5,6%');
+          } else {
+            setBetAquaring('6,5 - 8,3%');
+            setBetApi('6,6 - 5,6%');
+          }
+        }
+        if (countMounth === 10000000 && countMounth <= 100000000) {
+          if (url) {
+            setBetAquaring('6,1 - 7,0%');
+            setBetApi('6,2 - 5,5%');
+          } else {
+            setBetAquaring('6,3 - 8,3%');
+            setBetApi('6,5 - 5,6%');
+          }
+        }
+        if (countMounth >= 100000000) {
+          if (url) {
+            setBetAquaring('5,9 - 7,0%');
+            setBetApi('6,0 - 5,5%');
+          } else {
+            setBetAquaring('6,1 - 7,0%');
+            setBetApi('6,2 - 5,5%');
+          }
+        }
+        break;
+
+      case 'E-commerce':
+        if (countMounth === 0 && countMounth <= 100000) {
+          if (url) {
+            setBetAquaring('6,6 - 8,6%');
+            setBetApi('6,8 - 6,0%');
+          } else {
+            setBetAquaring('6,6 - 8,4%');
+            setBetApi('6,7 - 5,9%');
+          }
+        }
+        if (countMounth === 100000 && countMounth <= 500000) {
+          if (url) {
+            setBetAquaring('6,5 - 8,3%');
+            setBetApi('6,6 - 5,6%');
+          } else {
+            setBetAquaring('6,5 - 8,3%');
+            setBetApi('6,6 - 5,6%');
+          }
+        }
+        if (countMounth === 500000 && countMounth <= 1000000) {
+          if (url) {
+            setBetAquaring('6,0 - 8,2%');
+            setBetApi('3,0 - 4,2%');
+          } else {
+            setBetAquaring('6,3 - 8,3%');
+            setBetApi('6,5 - 5,6%');
+          }
+        }
+        if (countMounth === 1000000 && countMounth <= 5000000) {
+          if (url) {
+            setBetAquaring('5,9 - 8,0%');
+            setBetApi('3,0 - 4,0%');
+          } else {
+            setBetAquaring('6,0 - 8,2%');
+            setBetApi('3,0 - 4,2%');
+          }
+        }
+        if (countMounth === 5000000 && countMounth <= 10000000) {
+          if (url) {
+            setBetAquaring('5,8 - 8,0%');
+            setBetApi('3,0 - 4,0%');
+          } else {
+            setBetAquaring('5,8 - 7,8%');
+            setBetApi('3,0 - 4,0%');
+          }
+        }
+        if (countMounth >= 10000000) {
+          if (url) {
+            setBetAquaring('5,7 - 7,8%');
+            setBetApi('3,0 - 3,9%');
+          } else {
+            setBetAquaring('5,8 - 8,0%');
+            setBetApi('3,0 - 4,0%');
+          }
+        }
+        break;
+
+      default:
+        setBetAquaring('ТОЖЕ ЧТО ECOMMERCE');
+        setBetApi('ТОЖЕ ЧТО ECOMMERCE');
+        break;
+    }
+  };
+
   return (
     <section className={styles.root} id='clientsSection'>
       <h2 className={styles.title}>
@@ -87,13 +258,38 @@ export default function BetSection() {
           </thead>
           <tbody>
             <tr className={styles.row}>
-              <td>...</td>
-              <td>1 000 000</td>
-              <td>Любое значение</td>
-              <td>firekassa/com</td>
-              <td className={styles.calculateBtn}>рассчитать</td>
-              <td>5.3% - 6.5%</td>
-              <td>5.3% - 4.7%</td>
+              <td>
+                <select value={type} onChange={(e) => setType(e.currentTarget.value)}>
+                  {tableData.map((item) => (
+                    <option value={item.typeProject} key={item.typeProject}>
+                      {item.typeProject}
+                    </option>
+                  ))}
+                </select>
+              </td>
+              <td>
+                <input
+                  type='number'
+                  value={countMounth}
+                  onChange={(e) => setCountMounth(Number(e.currentTarget.value))}
+                />
+              </td>
+              <td>
+                <input type='text' value='Любое значение' readOnly />
+              </td>
+              <td>
+                <input
+                  type='text'
+                  placeholder='firekassa/com'
+                  value={url}
+                  onChange={(e) => setUrl(e.currentTarget.value)}
+                />
+              </td>
+              <td className={styles.calculateBtn} onClick={handleClickButton}>
+                рассчитать
+              </td>
+              <td>{betAquaring}</td>
+              <td>{betApi}</td>
             </tr>
             <tr>
               <td className={styles.tdColFirst}>

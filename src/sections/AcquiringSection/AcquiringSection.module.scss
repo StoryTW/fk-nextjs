@@ -1,6 +1,10 @@
 .root {
   padding: 64px;
   background-color: var(--gray-7);
+
+  @include respond(laptopXG) {
+    padding: 64px 20px;
+  }
 }
 
 .title {
@@ -71,5 +75,120 @@
         display: none;
       }
     }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1005px;
+    height: 284px;
+    z-index: -1;
+    top: 10px;
+    left: 50px;
+    background: no-repeat url('/images/acquiring/bgs_connector.png');
+
+    @include respond(laptopXG) {
+      display: none;
+    }
+  }
+}
+
+.up,
+.down {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+  @include respond(laptopXG) {
+    display: none;
+  }
+
+  .item {
+    max-width: 400px;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 20px 10px;
+    -webkit-box-shadow: 0px 0px 45px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 45px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 45px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.down {
+  .item:nth-child(1) {
+    margin-left: 100px;
+  }
+  .item:nth-child(2) {
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+  .item:nth-child(3) {
+    margin-right: 70px;
+    margin-top: 100px;
+
+    position: relative;
+    &::after {
+      width: 88px;
+      height: 88px;
+      content: ' ';
+      display: block;
+      position: absolute;
+      z-index: -2;
+      left: auto;
+      right: -17px;
+      top: -20px;
+      background: no-repeat 0 0 url('/images/acquiring/bg_right.png');
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.up {
+  .item:nth-child(1) {
+    position: relative;
+    &::after {
+      width: 88px;
+      height: 88px;
+      content: ' ';
+      display: block;
+      position: absolute;
+      z-index: -2;
+      left: -23px;
+      top: -16px;
+      background: no-repeat 0 0 url('/images/acquiring/bg_left.png');
+      background-size: 100% 100%;
+    }
+  }
+  .item:nth-child(3) {
+    margin-top: 50px;
+    margin-right: 70px;
+  }
+}
+
+.all {
+  display: none;
+
+  .item {
+    padding: 20px 10px;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 0px 0px 45px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 45px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 45px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  @include respond(laptopXG) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 }

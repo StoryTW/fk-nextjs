@@ -3,6 +3,30 @@ import styles from './AcquiringSection.module.scss';
 import Image from 'next/image';
 import { FormPay } from './FormPay/FormPay';
 
+const DATA_UP = [
+  {
+    text: '1. Клиент желает совершить обмен с вами с фиата (карта, кошелек) в стороннюю систему или криптовалюту. Он создает заявку-ордер у вас на сайте или через биржу',
+  },
+  {
+    text: '3. Вы передаете клиенту реквизит.',
+  },
+  {
+    text: '4. Клиент совершает оплату по данному инвойсу.',
+  },
+];
+
+const DATA_DOWN = [
+  {
+    text: '2. Вы (обменник или трейдер) обращаетесь к firekassa (через апи или интерфейс) и запрашиваете реквизит (карту/кошелек/ссылку-инвойс) на оплату. Тем самым создаете инвойс в системе.',
+  },
+  {
+    text: '5. Ваш инвойс успешно переходит в статус оплачено и баланс Вашего сайта растет.',
+  },
+  {
+    text: '6. Вы инициируете клиенту выплату по его заявке (или разморозку криптовалюты по сделке).',
+  },
+];
+
 const DATA = [
   {
     text: '1. Клиент желает совершить обмен с вами с фиата (карта, кошелек) в стороннюю систему или криптовалюту. Он создает заявку-ордер у вас на сайте или через биржу',
@@ -38,7 +62,23 @@ export default function AcquiringSection() {
         />
       </h2>
 
-      <div className={styles.content}></div>
+      <div className={styles.content}>
+        <div className={styles.up}>
+          {DATA_UP.map((item) => (
+            <div className={styles.item}>{item.text}</div>
+          ))}
+        </div>
+        <div className={styles.down}>
+          {DATA_DOWN.map((item) => (
+            <div className={styles.item}>{item.text}</div>
+          ))}
+        </div>
+        <div className={styles.all}>
+          {DATA.map((item) => (
+            <div className={styles.item}>{item.text}</div>
+          ))}
+        </div>
+      </div>
       <div className={styles.payform}>
         <div className={styles.leftSide}>
           <div className={styles.titleBlock}>ДЕМО ПЛАТЁЖ</div>

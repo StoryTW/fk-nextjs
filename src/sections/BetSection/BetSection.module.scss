@@ -111,6 +111,14 @@
     cursor: pointer;
     background: var(--orangeLight) !important;
     font-weight: 600 !important;
+    transition: 0.3s;
+
+    &:hover {
+      filter: contrast(2);
+    }
+    &:active {
+      scale: 0.9;
+    }
   }
 
   .tableContainer th,
@@ -118,6 +126,12 @@
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
+
+    input,
+    select {
+      color: var(--black);
+      width: 100%;
+    }
   }
 
   .tdText {
