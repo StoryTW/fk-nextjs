@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
-import { Header } from '@/layout/Header/Header';
 import { Footer } from '@/layout/Footer/Footer';
 import '@/assets/styles/index.scss';
 import { Providers } from '@/providers/Provider';
