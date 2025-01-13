@@ -2,13 +2,20 @@
   background: url('/images/project-life/notebook.png');
   background-repeat: no-repeat;
   background-position: center center;
-  height: 100vh;
+
+  @include respond(tabletL) {
+    height: 100vh;
+  }
 
   @include respond(tabletL) {
     background: url('/images/project-life/notebook_tablet.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+  }
+
+  @include respond(mobileL) {
+    background-size: 420px;
   }
 }
 
@@ -37,5 +44,4 @@
 
 .socials {
   margin-right: 100px;
-  margin-top: 80px;
 }
