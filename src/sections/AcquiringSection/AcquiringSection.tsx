@@ -41,7 +41,7 @@ export default function AcquiringSection() {
       <div className={styles.content}></div>
       <div className={styles.payform}>
         <div className={styles.leftSide}>
-          <div className={styles.titleBlock}>ФОРМА ОПЛАТЫ</div>
+          <div className={styles.titleBlock}>ДЕМО ПЛАТЁЖ</div>
           <Image
             src={'/images/bgs_linear-paymove.png'}
             alt='arrow'

@@ -1,11 +1,40 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './FormPay.module.scss';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { useCreateInvoice } from '@/hooks/query-hooks/invoice/useCreateInvoice';
+import { v4 as uuidv4 } from 'uuid';
 
-const options = ['Visa', 'Master Card', 'Mir', 'Yoomoney'];
+const options = [
+  {
+    name: 'Сбербанк',
+    value: 'card',
+  },
+  {
+    name: 'Т-Банк',
+    value: 'card',
+  },
+  {
+    name: 'Райффайзен',
+    value: 'card',
+  },
+  {
+    name: 'Альфа-банк',
+    value: 'card',
+  },
+  {
+    name: 'СБП',
+    value: 'sbp-a',
+  },
+  {
+    name: 'Наша платежная форма',
+    value: 'h2h',
+  },
+];
 
 export const FormPay = () => {
+  const [uuid, setUuid] = useState('');
+
   const {
     register,
     handleSubmit,
@@ -14,13 +43,40 @@ export const FormPay = () => {
     mode: 'onChange',
     defaultValues: {
       amount: '500',
-      method: 'Visa',
+      method: options[0].value,
     },
   });
 
-  const onSubmit: SubmitHandler<{ amount: string; method: string }> = (data) => {
-    console.log(data, 'data');
+  const handleGenerateUUID = () => {
+    const newUuid = uuidv4();
+
+    setUuid(newUuid);
   };
+
+  const { mutate, isPending } = useCreateInvoice({
+    onSuccess: (data) => {
+      if (data.payment_url) {
+        window.open(`${data.payment_url}`, '_blank');
+      }
+    },
+  });
+
+  const onSubmit: SubmitHandler<{
+    amount: string;
+    method: string;
+  }> = async (data) => {
+    await handleGenerateUUID();
+
+    mutate({
+      amount: data.amount,
+      order_id: uuid,
+      payment_methods: [data.method],
+    });
+  };
+
+  useEffect(() => {
+    handleGenerateUUID();
+  }, []);
 
   return (
     <form className={styles.root} onSubmit={handleSubmit(onSubmit)}>
@@ -31,20 +87,23 @@ export const FormPay = () => {
         </div>
 
         <div className={styles.inputWrapper}>
-          <input type='number' inputMode='numeric' className={styles.input} {...register('amount')} />
+          <input
+            type='number'
+            inputMode='numeric'
+            className={styles.input}
+            {...register('amount')}
+          />
           <select className={styles.select} {...register('method')}>
-            {options.map((item) => {
-              return (
-                <option key={item} value={item}>
-                  {item}
-                </option>
-              );
-            })}
+            {options.map((item) => (
+              <option key={item.name} value={item.value}>
+                {item.name}
+              </option>
+            ))}
           </select>
         </div>
       </div>
 
-      <button type='submit' tabIndex={-1} className={styles.btn} disabled={!isValid}>
+      <button type='submit' tabIndex={-1} className={styles.btn} disabled={!isValid || isPending}>
         ОПЛАТИТЬ
       </button>
     </form>
