@@ -189,8 +189,60 @@ export default function BetSection() {
         break;
 
       default:
-        setBetAquaring('ТОЖЕ ЧТО ECOMMERCE');
-        setBetApi('ТОЖЕ ЧТО ECOMMERCE');
+        if (countMounth === 0 && countMounth <= 100000) {
+          if (url) {
+            setBetAquaring('6,6 - 8,6%');
+            setBetApi('6,8 - 6,0%');
+          } else {
+            setBetAquaring('6,6 - 8,4%');
+            setBetApi('6,7 - 5,9%');
+          }
+        }
+        if (countMounth === 100000 && countMounth <= 500000) {
+          if (url) {
+            setBetAquaring('6,5 - 8,3%');
+            setBetApi('6,6 - 5,6%');
+          } else {
+            setBetAquaring('6,5 - 8,3%');
+            setBetApi('6,6 - 5,6%');
+          }
+        }
+        if (countMounth === 500000 && countMounth <= 1000000) {
+          if (url) {
+            setBetAquaring('6,0 - 8,2%');
+            setBetApi('3,0 - 4,2%');
+          } else {
+            setBetAquaring('6,3 - 8,3%');
+            setBetApi('6,5 - 5,6%');
+          }
+        }
+        if (countMounth === 1000000 && countMounth <= 5000000) {
+          if (url) {
+            setBetAquaring('5,9 - 8,0%');
+            setBetApi('3,0 - 4,0%');
+          } else {
+            setBetAquaring('6,0 - 8,2%');
+            setBetApi('3,0 - 4,2%');
+          }
+        }
+        if (countMounth === 5000000 && countMounth <= 10000000) {
+          if (url) {
+            setBetAquaring('5,8 - 8,0%');
+            setBetApi('3,0 - 4,0%');
+          } else {
+            setBetAquaring('5,8 - 7,8%');
+            setBetApi('3,0 - 4,0%');
+          }
+        }
+        if (countMounth >= 10000000) {
+          if (url) {
+            setBetAquaring('5,7 - 7,8%');
+            setBetApi('3,0 - 3,9%');
+          } else {
+            setBetAquaring('5,8 - 8,0%');
+            setBetApi('3,0 - 4,0%');
+          }
+        }
         break;
     }
   };
