@@ -1,0 +1,97 @@
+.root {
+  height: 544px;
+
+  @include respond(tabletL) {
+    height: auto;
+  }
+
+  .wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 642px;
+    margin-top: 170px;
+
+    @include respond(tabletL) {
+      max-width: 342px;
+      margin-top: 100px;
+    }
+
+    @include respond(mobileL) {
+      margin-top: 0;
+    }
+
+    .text {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      max-height: 240px;
+      overflow-y: scroll;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      @include OpenSans_18_400;
+      color: var(--black);
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      @include respond(tabletL) {
+        margin-top: 170px;
+        max-width: 320px;
+        @include OpenSans_14_400;
+        max-height: 600px;
+      }
+
+      @include respond(mobileL) {
+        margin-top: 200px;
+        @include OpenSans_12_400;
+        max-width: 220px;
+        max-height: 290px;
+      }
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .buttonContainer {
+      position: absolute;
+      width: 105%;
+      top: 20%;
+      display: flex;
+      justify-content: space-between;
+
+      @include respond(tabletL) {
+        top: 45%;
+        width: 109%;
+      }
+
+      @include respond(mobileL) {
+        top: 52%;
+        width: 109%;
+      }
+    }
+
+    .date {
+      position: absolute;
+      right: 0;
+      top: 48%;
+      font-style: italic;
+      @include OpenSans_18_400;
+
+      @include respond(tabletL) {
+        top: 120%;
+        @include OpenSans_14_400;
+      }
+
+      @include respond(mobileL) {
+        top: 100%;
+        right: 15%;
+        @include OpenSans_12_400;
+      }
+    }
+  }
+}
