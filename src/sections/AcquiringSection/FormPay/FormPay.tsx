@@ -104,7 +104,7 @@ export const FormPay = () => {
       </div>
 
       <button type='submit' tabIndex={-1} className={styles.btn} disabled={!isValid || isPending}>
-        ОПЛАТИТЬ
+        {isPending ? 'СОЗДАНИЕ ПЛАТЕЖА...' : 'ОПЛАТИТЬ'}
       </button>
     </form>
   );

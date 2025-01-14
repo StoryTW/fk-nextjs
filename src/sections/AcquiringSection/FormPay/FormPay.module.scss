@@ -71,9 +71,14 @@
   color: var(--white);
   cursor: pointer;
   box-shadow: 0 24px 72px 0 rgba(47, 47, 47, 0.2);
+  @include transition;
 
   @include respond(mobileL) {
     font-size: 18px;
+  }
+
+  &:hover {
+    opacity: 0.8;
   }
 
   &:focus {
