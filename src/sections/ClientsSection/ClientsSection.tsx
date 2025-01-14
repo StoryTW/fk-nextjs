@@ -32,7 +32,7 @@ const clientGroups = [
 
 export default function ClientsSection() {
   return (
-    <section className={styles.root}>
+    <section className={styles.root} id='partnersSection'>
       <div className={styles.head}>
         <h2 className={styles.title}>
           Наши клиенты

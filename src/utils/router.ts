@@ -3,7 +3,7 @@ export const ROUTER = {
   GUARANTEES: '/guarantees',
   PROJECT_NEWS: '/project-news',
   PROJECT_LIFE: '/project-life',
-  API: '/api-docs',
+  API: 'https://fkassa.gitbook.io/firekassa-api-v2',
   CONTACTS: '/contacts',
-  PARTNERS: '/our-partners',
+  PARTNERS: '#partnersSection',
 } as const;

@@ -11,7 +11,7 @@ export const DATA_NAVBAR = {
   },
   stavka: {
     name: 'СТАВКА',
-    href: '/',
+    href: '#clientsSection',
   },
   parners: {
     name: 'НАШИ ПАРТНЕРЫ',
@@ -61,10 +61,6 @@ export const DATA_NAVBAR = {
   about: {
     title: 'О НАС',
     options: [
-      // {
-      //   name: 'API',
-      //   href: ROUTER.API,
-      // },
       {
         name: 'ЖИЗНЬ ПРОЕКТА',
         href: ROUTER.PROJECT_LIFE,
@@ -95,7 +91,7 @@ export const Navbar = () => {
           <TriggerLink title={DATA_NAVBAR.parners.name} href={DATA_NAVBAR.parners.href} />
         </li>
         <li>
-          <TriggerLink title={DATA_NAVBAR.api.name} href={DATA_NAVBAR.api.href} />
+          <TriggerLink title={DATA_NAVBAR.api.name} href={DATA_NAVBAR.api.href} blank />
         </li>
         <li>
           <NavSelector title={DATA_NAVBAR.integration.title} options={DATA_NAVBAR.integration.options} />
