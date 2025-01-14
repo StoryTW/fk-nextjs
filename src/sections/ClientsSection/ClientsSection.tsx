@@ -5,7 +5,7 @@ import Image from 'next/image';
 const clientGroups = [
   {
     title: 'Bitpapa',
-    icon: '/images/clients/traiders/bitpapa.png',
+    icon: '/images/clients/traiders/bitpapa.svg',
     clients: [
       'WORK-BTC',
       'RV0101',
@@ -20,12 +20,12 @@ const clientGroups = [
   },
   {
     title: 'Binance',
-    icon: '/images/clients/traiders/binance.png',
+    icon: '/images/clients/traiders/binance.svg',
     clients: ['Telepat77', 'Peer2u', 'arb_arb', 'Billion_Dollars', 'Wins_'],
   },
   {
     title: 'Garantex',
-    icon: '/images/clients/traiders/garantex.png',
+    icon: '/images/clients/traiders/garantex.svg',
     clients: ['Odnokassanie', 'Telepat77', 'arb_arb', 'Cerber 2.0'],
   },
 ];
@@ -63,8 +63,8 @@ export default function ClientsSection() {
               <Image
                 src={group.icon}
                 alt={group.title}
-                width={125}
-                height={25}
+                width={225}
+                height={55}
                 className={styles.traidersIcon}
               />
               <div className={styles.clientColumns}>
@@ -103,36 +103,36 @@ export default function ClientsSection() {
           <div className={styles.contentCrypto}>
             <div className={styles.itemCrypto}>
               <Image
-                src={'/images/clients/crypto/01.png'}
-                width={33}
-                height={33}
+                src={'/images/clients/crypto/cryptonex.svg'}
+                width={93}
+                height={93}
                 className={styles.img}
                 alt='img'
               />
             </div>
             <div className={styles.itemCrypto}>
               <Image
-                src={'/images/clients/crypto/02.png'}
-                width={33}
-                height={33}
+                src={'/images/clients/crypto/exmo.svg'}
+                width={53}
+                height={53}
                 className={styles.img}
                 alt='img'
               />
             </div>
             <div className={styles.itemCrypto}>
               <Image
-                src={'/images/clients/crypto/03.png'}
-                width={33}
-                height={33}
+                src={'/images/clients/crypto/investority.svg'}
+                width={93}
+                height={93}
                 className={styles.img}
                 alt='img'
               />
             </div>
             <div className={styles.itemCrypto}>
               <Image
-                src={'/images/clients/crypto/04.png'}
-                width={33}
-                height={33}
+                src={'/images/clients/crypto/tokenspot.svg'}
+                width={93}
+                height={93}
                 className={styles.img}
                 alt='img'
               />
@@ -153,85 +153,85 @@ export default function ClientsSection() {
           <div className={styles.content}>
             <div className={styles.item}>
               <Image
-                src={'/images/clients/exchanger/01.png'}
+                src={'/images/clients/exchanger/laslobit.svg'}
                 alt={'обменники'}
-                width={100}
-                height={20}
+                width={190}
+                height={50}
                 className={styles.hexagon}
               />
             </div>
             <div className={styles.item}>
               <Image
-                src={'/images/clients/exchanger/02.png'}
+                src={'/images/clients/exchanger/crypster.svg'}
                 alt={'обменники'}
-                width={100}
-                height={20}
+                width={190}
+                height={50}
                 className={styles.hexagon}
               />
               <Image
-                src={'/images/clients/exchanger/03.png'}
+                src={'/images/clients/exchanger/fastchange.svg'}
                 alt={'обменники'}
-                width={100}
-                height={20}
-                className={styles.hexagon}
-              />
-            </div>
-            <div className={styles.item}>
-              <Image
-                src={'/images/clients/exchanger/04.png'}
-                alt={'обменники'}
-                width={100}
-                height={20}
+                width={190}
+                height={50}
                 className={styles.hexagon}
               />
             </div>
             <div className={styles.item}>
               <Image
-                src={'/images/clients/exchanger/05.png'}
+                src={'/images/clients/exchanger/bixter.svg'}
                 alt={'обменники'}
-                width={100}
-                height={20}
-                className={styles.hexagon}
-              />
-              <Image
-                src={'/images/clients/exchanger/06.png'}
-                alt={'обменники'}
-                width={100}
-                height={20}
+                width={190}
+                height={50}
                 className={styles.hexagon}
               />
             </div>
             <div className={styles.item}>
               <Image
-                src={'/images/clients/exchanger/07.png'}
+                src={'/images/clients/exchanger/cryptoxchange.svg'}
                 alt={'обменники'}
-                width={100}
-                height={20}
+                width={190}
+                height={50}
+                className={styles.hexagon}
+              />
+              <Image
+                src={'/images/clients/exchanger/coinbank.svg'}
+                alt={'обменники'}
+                width={190}
+                height={50}
                 className={styles.hexagon}
               />
             </div>
             <div className={styles.item}>
               <Image
-                src={'/images/clients/exchanger/08.png'}
+                src={'/images/clients/exchanger/swapex.svg'}
                 alt={'обменники'}
-                width={100}
-                height={20}
-                className={styles.hexagon}
-              />
-              <Image
-                src={'/images/clients/exchanger/09.png'}
-                alt={'обменники'}
-                width={100}
-                height={20}
+                width={190}
+                height={50}
                 className={styles.hexagon}
               />
             </div>
             <div className={styles.item}>
               <Image
-                src={'/images/clients/exchanger/10.png'}
+                src={'/images/clients/exchanger/16tonn.svg'}
                 alt={'обменники'}
-                width={100}
-                height={20}
+                width={190}
+                height={50}
+                className={styles.hexagon}
+              />
+              <Image
+                src={'/images/clients/exchanger/barry24.svg'}
+                alt={'обменники'}
+                width={190}
+                height={50}
+                className={styles.hexagon}
+              />
+            </div>
+            <div className={styles.item}>
+              <Image
+                src={'/images/clients/exchanger/perfectchange.svg'}
+                alt={'обменники'}
+                width={190}
+                height={60}
                 className={styles.hexagon}
               />
             </div>
@@ -251,122 +251,122 @@ export default function ClientsSection() {
           <div className={styles.content}>
             <div className={styles.item}>
               <Image
-                src={'/images/clients/ecommerce/01.png'}
+                src={'/images/clients/ecommerce/morelikes.svg'}
                 alt={'обменники'}
-                width={104}
-                height={15}
+                width={140}
+                height={45}
                 className={styles.hexagon}
               />
             </div>
             <div className={styles.item}>
               <Image
-                src={'/images/clients/ecommerce/02.png'}
+                src={'/images/clients/ecommerce/ipayer.svg'}
                 alt={'обменники'}
-                width={79}
-                height={21}
+                width={140}
+                height={45}
                 className={styles.hexagon}
               />
               <Image
-                src={'/images/clients/ecommerce/03.png'}
+                src={'/images/clients/ecommerce/slivkursov.net.svg'}
                 alt={'обменники'}
-                width={113}
-                height={13}
-                className={styles.hexagon}
-              />
-            </div>
-            <div className={styles.item}>
-              <Image
-                src={'/images/clients/ecommerce/06.png'}
-                alt={'обменники'}
-                width={40}
-                height={40}
-                className={styles.hexagon}
-              />
-              <Image
-                src={'/images/clients/ecommerce/05.png'}
-                alt={'обменники'}
-                width={34}
-                height={38}
-                className={styles.hexagon}
-              />
-              <Image
-                src={'/images/clients/ecommerce/04.png'}
-                alt={'обменники'}
-                width={108}
-                height={26}
+                width={160}
+                height={55}
                 className={styles.hexagon}
               />
             </div>
             <div className={styles.item}>
               <Image
-                src={'/images/clients/ecommerce/09.png'}
+                src={'/images/clients/ecommerce/profitsmm.svg'}
                 alt={'обменники'}
-                width={104}
-                height={21}
+                width={140}
+                height={45}
+                className={styles.hexagon}
+              />
+              <Image
+                src={'/images/clients/ecommerce/sms4you.svg'}
+                alt={'обменники'}
+                width={140}
+                height={45}
                 className={styles.hexagon}
               />
             </div>
             <div className={styles.item}>
               <Image
-                src={'/images/clients/ecommerce/08.png'}
+                src={'/images/clients/ecommerce/vaksms.svg'}
                 alt={'обменники'}
-                width={94}
-                height={28}
+                width={140}
+                height={45}
                 className={styles.hexagon}
               />
               <Image
-                src={'/images/clients/ecommerce/07.png'}
+                src={'/images/clients/ecommerce/robux.io.svg'}
                 alt={'обменники'}
-                width={21}
-                height={40}
-                className={styles.hexagon}
-              />
-            </div>
-            <div className={styles.item}>
-              <Image
-                src={'/images/clients/ecommerce/10.png'}
-                alt={'обменники'}
-                width={91}
-                height={22}
-                className={styles.hexagon}
-              />
-              <Image
-                src={'/images/clients/ecommerce/11.png'}
-                alt={'обменники'}
-                width={106}
-                height={22}
+                width={140}
+                height={45}
                 className={styles.hexagon}
               />
             </div>
             <div className={styles.item}>
               <Image
-                src={'/images/clients/ecommerce/12.png'}
+                src={'/images/clients/ecommerce/steamcoin.svg'}
                 alt={'обменники'}
-                width={110}
-                height={22}
+                width={140}
+                height={45}
+                className={styles.hexagon}
+              />
+              <Image
+                src={'/images/clients/ecommerce/acidmine.svg'}
+                alt={'обменники'}
+                width={140}
+                height={45}
                 className={styles.hexagon}
               />
             </div>
             <div className={styles.item}>
               <Image
-                src={'/images/clients/ecommerce/13.png'}
+                src={'/images/clients/ecommerce/minelegacy.svg'}
                 alt={'обменники'}
-                width={30}
-                height={22}
+                width={140}
+                height={45}
                 className={styles.hexagon}
               />
               <Image
-                src={'/images/clients/ecommerce/14.png'}
+                src={'/images/clients/ecommerce/politmine.svg'}
                 alt={'обменники'}
-                width={29}
-                height={28}
+                width={140}
+                height={45}
+                className={styles.hexagon}
+              />
+            </div>
+            <div className={styles.item}>
+              <Image
+                src={'/images/clients/ecommerce/fotoget1.svg'}
+                alt={'обменники'}
+                width={140}
+                height={45}
+                className={styles.hexagon}
+              />
+            </div>
+            <div className={styles.item}>
+              <Image
+                src={'/images/clients/ecommerce/narayanaservices.svg'}
+                alt={'обменники'}
+                width={170}
+                height={55}
                 className={styles.hexagon}
               />
               <Image
-                src={'/images/clients/ecommerce/15.png'}
+                src={'/images/clients/ecommerce/tricksmaster.svg'}
                 alt={'обменники'}
-                width={71}
-                height={28}
+                width={140}
+                height={45}
+                className={styles.hexagon}
+              />
+              <Image
+                src={'/images/clients/ecommerce/reallyworld.svg'}
+                alt={'обменники'}
+                width={140}
+                height={45}
                 className={styles.hexagon}
               />
             </div>
