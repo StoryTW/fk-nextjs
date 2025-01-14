@@ -19,6 +19,8 @@
   .contentInner {
     padding: 190px 50px;
     position: relative;
+    max-width: 1600px;
+    margin: 0 auto 64px auto;
 
     @include respond(laptopG) {
       padding: 20px;
@@ -165,6 +167,7 @@
     margin: 0 auto 24px;
     display: flex;
     justify-content: space-between;
+
     @include respond(laptop) {
       flex-direction: column;
       align-items: center;
@@ -210,6 +213,7 @@
           }
         }
       }
+
       .methods__items {
         display: flex;
         align-items: center;

@@ -1,5 +1,7 @@
 .root {
   padding: 0 98px;
+  max-width: 1600px;
+  margin: 0 auto 64px auto;
   @include respond(laptopL) {
     padding: 0 20px;
   }

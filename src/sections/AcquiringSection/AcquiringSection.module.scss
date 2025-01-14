@@ -1,6 +1,8 @@
 .root {
   padding: 64px;
   background-color: var(--gray-7);
+  max-width: 1600px;
+  margin: 0 auto 64px auto;
 
   @include respond(laptopXG) {
     padding: 64px 20px;
@@ -91,9 +93,10 @@
     position: absolute;
     width: 1005px;
     height: 284px;
+    transform: scale(1.09);
     z-index: -1;
-    top: 10px;
-    left: 50px;
+    top: 30px;
+    left: 100px;
     background: no-repeat url('/images/acquiring/bgs_connector.png');
 
     @include respond(laptopXG) {
