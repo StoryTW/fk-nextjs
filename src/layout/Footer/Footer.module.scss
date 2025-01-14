@@ -21,6 +21,8 @@
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  max-width: 1600px;
+  margin: 0 auto 64px auto;
 
   @include respond(laptopB) {
     padding: 110px 80px 60px;
