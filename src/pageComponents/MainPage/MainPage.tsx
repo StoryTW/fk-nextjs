@@ -2,6 +2,7 @@ import { Header } from '@/layout/Header/Header';
 import BetSection from '@/sections/BetSection/BetSection';
 import dynamic from 'next/dynamic';
 import React from 'react';
+import styles from './MainPage.module.scss';
 
 const OurTeam = dynamic(() => import('@/sections/OurTeam/OurTeam'));
 
@@ -24,16 +25,20 @@ export const MainPage = () => {
   return (
     <>
       <Header />
-      <main className='container'>
-        <BetSection />
-        <ClientsSection />
-        <HistorySection />
-        <RulesSection />
-        <ConditionSection />
-        <PayoffSchemeSection />
-        <AcquiringSection />
-        <AboutSection />
-        <OurTeam />
+      <main>
+        <div className='container'>
+          <BetSection />
+          <ClientsSection />
+          <HistorySection />
+          <RulesSection />
+          <ConditionSection />
+          <PayoffSchemeSection />
+          <AcquiringSection />
+          <AboutSection />
+        </div>
+        <div className={styles.ourteamWrapper}>
+          <OurTeam />
+        </div>
       </main>
     </>
   );
