@@ -29,7 +29,8 @@
     pointer-events: none;
 
     @include respond(mobileL) {
-      right: -10%;
+      right: 20%;
+      bottom: 8%;
     }
   }
 }

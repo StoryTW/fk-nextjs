@@ -169,7 +169,7 @@
 
 .online {
   position: absolute !important;
-  right: 20px;
+  right: 40px;
   top: -50px;
   @include respond(tabletL) {
     display: none !important;
