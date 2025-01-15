@@ -25,7 +25,7 @@ const clientGroups = [
   },
   {
     title: 'Garantex',
-    icon: '/images/clients/traiders/garantex.svg',
+    icon: '/images/clients/traiders/Garantex.svg',
     clients: ['Odnokassanie', 'Telepat77', 'arb_arb', 'Cerber 2.0'],
   },
 ];
