@@ -12,43 +12,100 @@ export default function BetSection() {
   const [betAquaring, setBetAquaring] = useState<string>('5,3 - 6,5%');
   const [betApi, setBetApi] = useState<string>('5,3 - 4,7%');
 
+  const setEcommerce = () => {
+    if (countMounth === 0 && countMounth <= 100000) {
+      if (url) {
+        setBetAquaring('6,6 - 8,6%');
+        setBetApi('6,0 - 6,8%');
+      } else {
+        setBetAquaring('6,6 - 8,4%');
+        setBetApi('5,9 - 6,7%');
+      }
+    }
+    if (countMounth === 100000 && countMounth <= 500000) {
+      if (url) {
+        setBetAquaring('6,5 - 8,3%');
+        setBetApi('5,6 - 6,6%');
+      } else {
+        setBetAquaring('6,5 - 8,3%');
+        setBetApi('5,6 - 6,6%');
+      }
+    }
+    if (countMounth === 500000 && countMounth <= 1000000) {
+      if (url) {
+        setBetAquaring('6,0 - 8,2%');
+        setBetApi('3,0 - 4,2%');
+      } else {
+        setBetAquaring('6,3 - 8,3%');
+        setBetApi('5,6 - 6,5%');
+      }
+    }
+    if (countMounth === 1000000 && countMounth <= 5000000) {
+      if (url) {
+        setBetAquaring('5,9 - 8,0%');
+        setBetApi('3,0 - 4,0%');
+      } else {
+        setBetAquaring('6,0 - 8,2%');
+        setBetApi('3,0 - 4,2%');
+      }
+    }
+    if (countMounth === 5000000 && countMounth <= 10000000) {
+      if (url) {
+        setBetAquaring('5,8 - 8,0%');
+        setBetApi('3,0 - 4,0%');
+      } else {
+        setBetAquaring('5,8 - 7,8%');
+        setBetApi('3,0 - 4,0%');
+      }
+    }
+    if (countMounth >= 10000000) {
+      if (url) {
+        setBetAquaring('5,7 - 7,8%');
+        setBetApi('3,0 - 3,9%');
+      } else {
+        setBetAquaring('5,8 - 8,0%');
+        setBetApi('3,0 - 4,0%');
+      }
+    }
+  };
+
   const handleClickButton = () => {
     switch (type) {
       case 'Обменник':
         if (countMounth === 0 && countMounth <= 1000000) {
           if (url) {
             setBetAquaring('5,2 - 6,3%');
-            setBetApi('5,2 - 4,7%');
+            setBetApi('4,7 - 5,2%');
           } else {
             setBetAquaring('5,3 - 6,5%');
-            setBetApi('5,3 - 4,7%');
+            setBetApi('4,7 - 5,3%');
           }
         }
         if (countMounth === 1000000 && countMounth <= 10000000) {
           if (url) {
             setBetAquaring('5,1 - 6%');
-            setBetApi('5 - 4,5%');
+            setBetApi('4,5 - 5%');
           } else {
             setBetAquaring('5,2 - 6,3%');
-            setBetApi('5,2 - 4,5%');
+            setBetApi('4,5 - 5,2%');
           }
         }
         if (countMounth === 10000000 && countMounth <= 100000000) {
           if (url) {
             setBetAquaring('5,0 - 5,9%');
-            setBetApi('4,8 - 4,3%');
+            setBetApi('4,3 - 4,8%');
           } else {
             setBetAquaring('5,1 - 6%');
-            setBetApi('5 - 4,4%');
+            setBetApi('4,4 - 5%');
           }
         }
         if (countMounth >= 100000000) {
           if (url) {
             setBetAquaring('4,9 - 6,0%');
-            setBetApi('4,8 - 4,2%');
+            setBetApi('4,2 - 4,8%');
           } else {
             setBetAquaring('5,0 - 5,9%');
-            setBetApi('4,8 - 4,3%');
+            setBetApi('4,3 - 4,8%');
           }
         }
         break;
@@ -57,37 +114,37 @@ export default function BetSection() {
         if (countMounth === 0 && countMounth <= 1000000) {
           if (url) {
             setBetAquaring('5,2 - 6,3%');
-            setBetApi('5,2 - 4,5%');
+            setBetApi('4,5 - 5,2%');
           } else {
             setBetAquaring('5,3 - 6,5%');
-            setBetApi('5,3 - 4,5%');
+            setBetApi('4,5 - 5,3%');
           }
         }
         if (countMounth === 1000000 && countMounth <= 10000000) {
           if (url) {
             setBetAquaring('5,1 - 6%');
-            setBetApi('5 - 4,4%');
+            setBetApi('4,4 - 5%');
           } else {
             setBetAquaring('5,2 - 6,3%');
-            setBetApi('5,2 - 4,5%');
+            setBetApi('4,5 - 5,2%');
           }
         }
         if (countMounth === 10000000 && countMounth <= 100000000) {
           if (url) {
             setBetAquaring('5,0 - 5,9%');
-            setBetApi('4,8 - 4,3%');
+            setBetApi('4,3 - 4,8%');
           } else {
             setBetAquaring('5,1 - 6%');
-            setBetApi('5 - 4,4%');
+            setBetApi('4,4 - 5%');
           }
         }
         if (countMounth >= 100000000) {
           if (url) {
             setBetAquaring('4,9 - 6,0%');
-            setBetApi('4,8 - 4,2%');
+            setBetApi('4,2 - 4,8%');
           } else {
             setBetAquaring('5,0 - 5,9%');
-            setBetApi('4,8 - 4,3%');
+            setBetApi('4,3 - 4,8%');
           }
         }
         break;
@@ -96,153 +153,47 @@ export default function BetSection() {
         if (countMounth === 0 && countMounth <= 1000000) {
           if (url) {
             setBetAquaring('6,6 - 8,6%');
-            setBetApi('6,8 - 6,0%');
+            setBetApi('6,0 - 6,8%');
           } else {
             setBetAquaring('6,6 - 8,4%');
-            setBetApi('6,7 - 5,9%');
+            setBetApi('5,9 - 6,7%');
           }
         }
         if (countMounth === 1000000 && countMounth <= 10000000) {
           if (url) {
             setBetAquaring('6,5 - 8,3%');
-            setBetApi('6,6 - 5,6%');
+            setBetApi('5,6 - 6,6%');
           } else {
             setBetAquaring('6,5 - 8,3%');
-            setBetApi('6,6 - 5,6%');
+            setBetApi('5,6 - 6,6%');
           }
         }
         if (countMounth === 10000000 && countMounth <= 100000000) {
           if (url) {
             setBetAquaring('6,1 - 7,0%');
-            setBetApi('6,2 - 5,5%');
+            setBetApi('5,5 - 6,2%');
           } else {
             setBetAquaring('6,3 - 8,3%');
-            setBetApi('6,5 - 5,6%');
+            setBetApi('5,6 - 6,5%');
           }
         }
         if (countMounth >= 100000000) {
           if (url) {
             setBetAquaring('5,9 - 7,0%');
-            setBetApi('6,0 - 5,5%');
+            setBetApi('5,5 - 6,0%');
           } else {
             setBetAquaring('6,1 - 7,0%');
-            setBetApi('6,2 - 5,5%');
+            setBetApi('5,5 - 6,2%');
           }
         }
         break;
 
       case 'E-commerce':
-        if (countMounth === 0 && countMounth <= 100000) {
-          if (url) {
-            setBetAquaring('6,6 - 8,6%');
-            setBetApi('6,8 - 6,0%');
-          } else {
-            setBetAquaring('6,6 - 8,4%');
-            setBetApi('6,7 - 5,9%');
-          }
-        }
-        if (countMounth === 100000 && countMounth <= 500000) {
-          if (url) {
-            setBetAquaring('6,5 - 8,3%');
-            setBetApi('6,6 - 5,6%');
-          } else {
-            setBetAquaring('6,5 - 8,3%');
-            setBetApi('6,6 - 5,6%');
-          }
-        }
-        if (countMounth === 500000 && countMounth <= 1000000) {
-          if (url) {
-            setBetAquaring('6,0 - 8,2%');
-            setBetApi('3,0 - 4,2%');
-          } else {
-            setBetAquaring('6,3 - 8,3%');
-            setBetApi('6,5 - 5,6%');
-          }
-        }
-        if (countMounth === 1000000 && countMounth <= 5000000) {
-          if (url) {
-            setBetAquaring('5,9 - 8,0%');
-            setBetApi('3,0 - 4,0%');
-          } else {
-            setBetAquaring('6,0 - 8,2%');
-            setBetApi('3,0 - 4,2%');
-          }
-        }
-        if (countMounth === 5000000 && countMounth <= 10000000) {
-          if (url) {
-            setBetAquaring('5,8 - 8,0%');
-            setBetApi('3,0 - 4,0%');
-          } else {
-            setBetAquaring('5,8 - 7,8%');
-            setBetApi('3,0 - 4,0%');
-          }
-        }
-        if (countMounth >= 10000000) {
-          if (url) {
-            setBetAquaring('5,7 - 7,8%');
-            setBetApi('3,0 - 3,9%');
-          } else {
-            setBetAquaring('5,8 - 8,0%');
-            setBetApi('3,0 - 4,0%');
-          }
-        }
+        setEcommerce();
         break;
 
       default:
-        if (countMounth === 0 && countMounth <= 100000) {
-          if (url) {
-            setBetAquaring('6,6 - 8,6%');
-            setBetApi('6,8 - 6,0%');
-          } else {
-            setBetAquaring('6,6 - 8,4%');
-            setBetApi('6,7 - 5,9%');
-          }
-        }
-        if (countMounth === 100000 && countMounth <= 500000) {
-          if (url) {
-            setBetAquaring('6,5 - 8,3%');
-            setBetApi('6,6 - 5,6%');
-          } else {
-            setBetAquaring('6,5 - 8,3%');
-            setBetApi('6,6 - 5,6%');
-          }
-        }
-        if (countMounth === 500000 && countMounth <= 1000000) {
-          if (url) {
-            setBetAquaring('6,0 - 8,2%');
-            setBetApi('3,0 - 4,2%');
-          } else {
-            setBetAquaring('6,3 - 8,3%');
-            setBetApi('6,5 - 5,6%');
-          }
-        }
-        if (countMounth === 1000000 && countMounth <= 5000000) {
-          if (url) {
-            setBetAquaring('5,9 - 8,0%');
-            setBetApi('3,0 - 4,0%');
-          } else {
-            setBetAquaring('6,0 - 8,2%');
-            setBetApi('3,0 - 4,2%');
-          }
-        }
-        if (countMounth === 5000000 && countMounth <= 10000000) {
-          if (url) {
-            setBetAquaring('5,8 - 8,0%');
-            setBetApi('3,0 - 4,0%');
-          } else {
-            setBetAquaring('5,8 - 7,8%');
-            setBetApi('3,0 - 4,0%');
-          }
-        }
-        if (countMounth >= 10000000) {
-          if (url) {
-            setBetAquaring('5,7 - 7,8%');
-            setBetApi('3,0 - 3,9%');
-          } else {
-            setBetAquaring('5,8 - 8,0%');
-            setBetApi('3,0 - 4,0%');
-          }
-        }
+        setEcommerce();
         break;
     }
   };
@@ -322,7 +273,6 @@ export default function BetSection() {
               <td>
                 <input
                   type='number'
-                  value={countMounth}
                   onChange={(e) => setCountMounth(Number(e.currentTarget.value))}
                 />
               </td>
