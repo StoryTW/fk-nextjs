@@ -1,28 +1,6 @@
 .ourteamWrapper {
-  position: relative;
   max-width: 3000px;
   margin: 0 auto;
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: no-repeat 76% 0 url('/images/our-team/bgs_logo.png');
-    opacity: 0.1; /* Установите нужную прозрачность */
-    z-index: -1; /* Поместить за основным контентом */
-  }
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: no-repeat 95% 130% url('/images/our-team/bgs_logo_2.png');
-    opacity: 0.1; /* Установите нужную прозрачность */
-    z-index: -1; /* Поместить за основным контентом */
-  }
+  background: no-repeat right url('/images/our-team/bg.png');
 }
