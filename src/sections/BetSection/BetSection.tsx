@@ -4,13 +4,14 @@ import React, { useState } from 'react';
 import styles from './BetSection.module.scss';
 import Image from 'next/image';
 import { liMassive, liMassive2, tableData } from './data';
+import Link from 'next/link';
 
 export default function BetSection() {
   const [countMounth, setCountMounth] = useState<number>(0);
   const [url, setUrl] = useState<string>('');
   const [type, setType] = useState<string>(tableData[0].typeProject);
   const [betAquaring, setBetAquaring] = useState<string>('5,3 - 6,5%');
-  const [betApi, setBetApi] = useState<string>('5,3 - 4,7%');
+  const [betApi, setBetApi] = useState<string>('4,7 - 5,3%');
 
   const setEcommerce = () => {
     if (countMounth === 0 && countMounth <= 100000) {
@@ -272,6 +273,7 @@ export default function BetSection() {
               </td>
               <td>
                 <input
+                  placeholder='0'
                   type='number'
                   onChange={(e) => setCountMounth(Number(e.currentTarget.value))}
                 />
@@ -315,14 +317,14 @@ export default function BetSection() {
         </table>
       </div>
       <div className={styles.icons}>
-        <a href='/' className={styles.icon}>
+        <Link href='/' className={styles.icon}>
           <Image src={'/images/online.png'} alt='online' width={200} height={250} />
           <p className={styles.iconText}>Написать</p>
-        </a>
-        <a href='/' className={styles.icon}>
+        </Link>
+        <Link href='/' className={styles.icon}>
           <Image src={'/images/clients/telephone.png'} alt='online' width={200} height={250} />
           <p className={styles.iconText}>Позвонить</p>
-        </a>
+        </Link>
       </div>
     </section>
   );

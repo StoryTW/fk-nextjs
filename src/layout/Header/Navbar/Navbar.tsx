@@ -11,7 +11,7 @@ export const DATA_NAVBAR = {
   },
   stavka: {
     name: 'СТАВКА',
-    href: '#clientsSection',
+    href: ROUTER.STAVKA,
   },
   parners: {
     name: 'НАШИ ПАРТНЕРЫ',
