@@ -5,5 +5,6 @@ export const ROUTER = {
   PROJECT_LIFE: '/project-life',
   API: 'https://fkassa.gitbook.io/firekassa-api-v2',
   CONTACTS: '/contacts',
-  PARTNERS: '#partnersSection',
+  PARTNERS: '/#partnersSection',
+  STAVKA: '/#clientsSection',
 } as const;

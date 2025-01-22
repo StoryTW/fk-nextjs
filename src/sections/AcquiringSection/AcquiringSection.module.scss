@@ -2,7 +2,7 @@
   padding: 64px;
   background-color: var(--gray-7);
   max-width: 1600px;
-  margin: 0 auto 64px auto;
+  margin: 0 auto;
 
   @include respond(laptopXG) {
     padding: 64px 20px;

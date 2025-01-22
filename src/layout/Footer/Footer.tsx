@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 import clsx from 'clsx';
+import Link from 'next/link';
+import { ROUTER } from '@/utils/router';
 
 const DATA = [
   {
@@ -16,7 +18,7 @@ const DATA = [
     name: 'Процедура AML',
   },
   {
-    href: '#',
+    href: ROUTER.GUARANTEES,
     name: 'Гарантии',
   },
   {
@@ -28,7 +30,7 @@ const DATA = [
     name: 'СМИ о нас',
   },
   {
-    href: '#',
+    href: ROUTER.API,
     name: 'Описание API',
   },
 ];
@@ -42,9 +44,9 @@ export const Footer = () => {
             {DATA.map((item, index) => {
               return (
                 <li key={index} className={styles.item}>
-                  <a href={item.href} target='_blank'>
+                  <Link href={item.href} target='_blank'>
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
