@@ -7,10 +7,10 @@ import { liMassive, liMassive2, tableData } from './data';
 
 export default function BetSection() {
   const [countMounth, setCountMounth] = useState<number>(0);
-  const [url, setUrl] = useState<string>('');
+  const [url, setUrl] = useState<string>('www.firekassa.com');
   const [type, setType] = useState<string>(tableData[0].typeProject);
-  const [betAquaring, setBetAquaring] = useState<string>('5,3 - 6,5%');
-  const [betApi, setBetApi] = useState<string>('5,3 - 4,7%');
+  const [betAquaring, setBetAquaring] = useState<string>('');
+  const [betApi, setBetApi] = useState<string>('');
 
   const setEcommerce = () => {
     if (countMounth === 0 && countMounth <= 100000) {
@@ -277,7 +277,7 @@ export default function BetSection() {
                 />
               </td>
               <td>
-                <input type='text' value='Любое значение' readOnly />
+                <input type='number' />
               </td>
               <td>
                 <input
@@ -293,24 +293,19 @@ export default function BetSection() {
               <td>{betAquaring}</td>
               <td>{betApi}</td>
             </tr>
-            <tr>
-              <td className={styles.tdColFirst}>
-                Трейдерам
-                <br />
-                Эл. Кошельку
-                <br />
-                E-commerce
-              </td>
-              <td colSpan={6} className={styles.tdText}>
-                <span>
-                  За более точным расчетом обращайтесь к нашим сотрудникам в предоставленной форме
-                  ниже.
-                </span>
-                <br />
-                <br />
-                <p>Оставьте заявку на расчет тарифа, Наши специалисты свяжутся с Вами.</p>
-              </td>
-            </tr>
+            {(betApi || betAquaring) && (
+              <tr>
+                <td colSpan={6} className={styles.tdText}>
+                  <span>
+                    За более точным расчетом обращайтесь к нашим сотрудникам в предоставленной форме
+                    ниже.
+                  </span>
+                  <br />
+                  <br />
+                  <p>Оставьте заявку на расчет тарифа, Наши специалисты свяжутся с Вами.</p>
+                </td>
+              </tr>
+            )}
           </tbody>
         </table>
       </div>
