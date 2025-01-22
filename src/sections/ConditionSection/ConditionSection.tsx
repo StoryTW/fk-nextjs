@@ -65,18 +65,18 @@ export default function ConditionSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const images = [
-    { src: '/images/condition/methods/sber.png', width: 106, height: 28 },
-    { src: '/images/condition/methods/tinkoff.png', width: 106, height: 31 },
-    { src: '/images/condition/methods/rayf.png', width: 117, height: 26 },
-    { src: '/images/condition/methods/gaz.png', width: 88, height: 42 },
-    { src: '/images/condition/methods/alfa.png', width: 142, height: 28 },
-    { src: '/images/condition/methods/qmoney.png', width: 91, height: 19 },
-    { src: '/images/condition/methods/union.png', width: 99, height: 22 },
-    { src: '/images/condition/methods/tele.png', width: 66, height: 25 },
+    { src: '/images/condition/methods/sber.svg', width: 126, height: 50 },
+    { src: '/images/condition/methods/tinkoff.svg', width: 106, height: 50 },
+    { src: '/images/condition/methods/rayf.svg', width: 117, height: 50 },
+    { src: '/images/condition/methods/gaz.svg', width: 88, height: 50 },
+    { src: '/images/condition/methods/alfa.svg', width: 142, height: 50 },
+    { src: '/images/condition/methods/qmoney.svg', width: 91, height: 50 },
+    { src: '/images/condition/methods/union.svg', width: 99, height: 50 },
+    { src: '/images/condition/methods/tele2.svg', width: 66, height: 50 },
     { src: '/images/condition/methods/bilayn.png', width: 76, height: 22 },
-    { src: '/images/condition/methods/megafon.png', width: 94, height: 17 },
-    { src: '/images/condition/methods/yota.png', width: 52, height: 24 },
-    { src: '/images/condition/methods/steam.png', width: 87, height: 28 },
+    { src: '/images/condition/methods/megafon.svg', width: 94, height: 50 },
+    { src: '/images/condition/methods/yota.svg', width: 52, height: 50 },
+    { src: '/images/condition/methods/steam.svg', width: 87, height: 50 },
   ];
   return (
     <section className={styles.condition}>
