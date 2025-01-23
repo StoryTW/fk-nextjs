@@ -290,6 +290,8 @@
         align-items: center;
         flex-wrap: wrap;
 
+
+
         @include respond(laptop) {
           justify-content: center;
         }
@@ -364,7 +366,16 @@
   }
 }
 
-  
 .imageWrapper {
   cursor: pointer;
+
+  img {
+    filter: brightness(0);
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      filter: brightness(1);
+      transition: all .2s ease-in-out;
+    }
+  }
 }
