@@ -73,7 +73,7 @@ export default function ConditionSection() {
     { src: '/images/condition/methods/qmoney.svg', width: 91, height: 50 },
     { src: '/images/condition/methods/union.svg', width: 99, height: 50 },
     { src: '/images/condition/methods/tele2.svg', width: 66, height: 50 },
-    { src: '/images/condition/methods/bilayn.png', width: 76, height: 22 },
+    { src: '/images/condition/methods/bilayn.svg', width: 76, height: 50 },
     { src: '/images/condition/methods/megafon.svg', width: 94, height: 50 },
     { src: '/images/condition/methods/yota.svg', width: 52, height: 50 },
     { src: '/images/condition/methods/steam.svg', width: 87, height: 50 },

@@ -5,6 +5,7 @@ import styles from './BetSection.module.scss';
 import Image from 'next/image';
 import { liMassive, liMassive2, tableData } from './data';
 import Link from 'next/link';
+import clsx from 'clsx';
 
 export default function BetSection() {
   const [countMounth, setCountMounth] = useState<number>(0);
@@ -316,7 +317,7 @@ export default function BetSection() {
           <Image src={'/images/online.png'} alt='online' width={200} height={250} />
           <p className={styles.iconText}>Написать</p>
         </Link>
-        <Link href='/' className={styles.icon}>
+        <Link href='/' className={clsx(styles.icon, styles.iconTop)}>
           <Image src={'/images/clients/telephone.png'} alt='online' width={200} height={250} />
           <p className={styles.iconText}>Позвонить</p>
         </Link>
