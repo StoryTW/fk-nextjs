@@ -370,11 +370,11 @@
   cursor: pointer;
 
   img {
-    filter: brightness(0);
+    filter: grayscale(1);
     transition: all .2s ease-in-out;
 
     &:hover {
-      filter: brightness(1);
+      filter: grayscale(0);
       transition: all .2s ease-in-out;
     }
   }
