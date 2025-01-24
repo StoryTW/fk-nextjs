@@ -3,6 +3,7 @@ import { Open_Sans } from 'next/font/google';
 import { Footer } from '@/layout/Footer/Footer';
 import '@/assets/styles/index.scss';
 import { Providers } from '@/providers/Provider';
+import Head from 'next/head';
 
 type RootLayoutType = Readonly<{
   children: React.ReactNode;
@@ -22,6 +23,9 @@ const openSans = Open_Sans({
 export default function RootLayout({ children }: RootLayoutType) {
   return (
     <html lang='ru'>
+      <Head>
+        <script src='//code.jivo.ru/widget/5wJO9iFX3' async />
+      </Head>
       <body className={openSans.className}>
         <Providers>
           {children}
