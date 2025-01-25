@@ -5,6 +5,7 @@ import React from 'react';
 import { SOCIALS } from '@/sections/OurTeam/OurTeam.data';
 import Image from 'next/image';
 import { Online } from '@/components/Online/Online';
+import { tree } from 'next/dist/build/templates/app-page';
 
 const images = [
   '/images/project-life-page/image.png',
@@ -36,6 +37,8 @@ const ProjectLifePage = () => {
           widthMidImg={468}
           heightMidImg={547}
           images={images}
+          isOrangeBackMidImg={true}
+          isBlueBackMidImg={false}
           imgMiddle='/images/project-life-page/people.png'
         />
         <div className={styles.descriptions}>
@@ -55,6 +58,8 @@ const ProjectLifePage = () => {
           widthMidImg={611}
           heightMidImg={541}
           images={images2}
+          isBlueBackMidImg={true}
+          isOrangeBackMidImg={false}
           imgMiddle='/images/project-life-page/people2.png'
           isReverse
         />
@@ -69,6 +74,7 @@ const ProjectLifePage = () => {
           heightMidImg={64}
           className={styles.imagesSection3}
           isOrangeBackMidImg={false}
+          isBlueBackMidImg={false}
           images={images3}
           imgMiddle='/images/project-life-page/logo_fk.png'
         />

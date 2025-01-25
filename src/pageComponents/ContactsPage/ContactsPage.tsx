@@ -15,23 +15,35 @@ export const ContactsPage = () => {
             <div className={styles.item}>
               Интернет проектам: <br />
               +7 996 342 7459
-              <br /> https://t.me/VyachAntipov
+              <br /> t.me/VyachAntipov
+              <br /> С 9:00 до 19:00 ежедневно
             </div>
             <div className={styles.item}>
               По вопросам pr и сотруднечеству <br />
               +7 996 342 7459 <br />
-              https://t.me/VyachAntipov
+              t.me/VyachAntipov
+              <br />С 9:00 до 19:00 ежедневно
             </div>
             <div className={styles.item}>
-              Почтовий адрес:
+              Почтовый адрес:
               <br />
-              @yandex/ru***
+              sales@firekassa.com
             </div>
           </div>
           <div className={styles.list}>
-            <div className={styles.item}>@firekassa с 9:00 до 2:00 ежедневно</div>
-            <div className={styles.item}>@sbercore @Mavi_support ежедневно с 0:00 до 9:00</div>
-            <div className={styles.item}>email: support@firekassa.com</div>
+            <div className={styles.item}>
+              Техническая поддержка: <br />
+              support@firekassa.com <br /> t.me/firekassa <br /> с 9:00 до 2:00 ежедневно
+            </div>
+            <div className={styles.item}>
+              {' '}
+              Ночная поддержка обменников: <br />
+              t.me/sbercore
+              <br />
+              t.me/Mavi_support
+              <br />
+              ежедневно с 0:00 до 9:00
+            </div>
           </div>
         </div>
         <SocialsBlock className={styles.socials} />

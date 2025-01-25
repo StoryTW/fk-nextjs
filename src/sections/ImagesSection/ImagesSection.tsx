@@ -29,6 +29,7 @@ type TImagesSections = {
   widthMidImg: number;
   heightMidImg: number;
   isOrangeBackMidImg?: boolean;
+  isBlueBackMidImg?: boolean;
   className?: string;
 };
 
@@ -39,6 +40,7 @@ const ImagesSection: FC<TImagesSections> = ({
   widthMidImg,
   heightMidImg,
   isOrangeBackMidImg = true,
+  isBlueBackMidImg = true,
   className,
 }) => {
   return (
@@ -49,6 +51,15 @@ const ImagesSection: FC<TImagesSections> = ({
           {isOrangeBackMidImg && (
             <Image
               src={'/images/project-life-page/orange-back.png'}
+              width={780}
+              height={776}
+              alt='orange'
+              className={styles.orange}
+            />
+          )}
+          {isBlueBackMidImg && (
+            <Image
+              src={'/images/project-life-page/blue.png'}
               width={780}
               height={776}
               alt='orange'
