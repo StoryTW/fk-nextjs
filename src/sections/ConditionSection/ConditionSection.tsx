@@ -1,8 +1,83 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import styles from './ConditionSection.module.scss';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+
+const AnimatedSVG = ({ hoveredIndex }: { hoveredIndex: number | null }) => {
+  const circles = [
+    { radius: 105, initialFill: 0.4 },
+    { radius: 85, initialFill: 0.6 },
+    { radius: 65, initialFill: 0.7 },
+    { radius: 45, initialFill: 0.75 },
+    { radius: 25, initialFill: 0.8 },
+    { radius: 10, initialFill: 0.8 },
+  ];
+
+  const getCircumference = (radius: number) => 2 * Math.PI * radius;
+
+  return (
+    <motion.svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' width='220' height='220'>
+      <defs>
+        <linearGradient id='gradient' x1='0%' y1='0%' x2='0%' y2='100%'>
+          <stop offset='0%' stopColor='#A88360' />
+          <stop offset='100%' stopColor='#F5831A' />
+        </linearGradient>
+      </defs>
+      {circles.map((circle, index) => {
+        const circumference = getCircumference(circle.radius);
+        const initialOffset = circumference * (1 - circle.initialFill);
+        return (
+          <g key={index}>
+            <circle cx='110' cy='110' r={circle.radius} fill='none' stroke='none' strokeWidth='8' />
+            <motion.circle
+              cx='110'
+              cy='110'
+              r={circle.radius}
+              fill='none'
+              stroke='url(#gradient)'
+              strokeWidth='8'
+              strokeDasharray={circumference}
+              strokeDashoffset={hoveredIndex === index ? 0 : initialOffset}
+              strokeLinecap='round'
+              animate={{
+                strokeDashoffset: hoveredIndex === index ? 0 : initialOffset,
+              }}
+              initial={false}
+              transition={{
+                duration: 1.8,
+                ease: 'easeInOut',
+              }}
+              style={{
+                transform: 'rotate(-90deg)',
+                transformOrigin: 'center',
+              }}
+            />
+          </g>
+        );
+      })}
+    </motion.svg>
+  );
+};
 
 export default function ConditionSection() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const images = [
+    { src: '/images/condition/methods/sber.svg', width: 126, height: 50 },
+    { src: '/images/condition/methods/tinkoff.svg', width: 106, height: 50 },
+    { src: '/images/condition/methods/rayf.svg', width: 117, height: 50 },
+    { src: '/images/condition/methods/gaz.svg', width: 88, height: 50 },
+    { src: '/images/condition/methods/alfa.svg', width: 142, height: 50 },
+    { src: '/images/condition/methods/qmoney.svg', width: 91, height: 50 },
+    { src: '/images/condition/methods/union.svg', width: 99, height: 50 },
+    { src: '/images/condition/methods/tele2.svg', width: 66, height: 50 },
+    { src: '/images/condition/methods/bilayn.svg', width: 76, height: 50 },
+    { src: '/images/condition/methods/megafon.svg', width: 94, height: 50 },
+    { src: '/images/condition/methods/yota.svg', width: 52, height: 50 },
+    { src: '/images/condition/methods/steam.svg', width: 87, height: 50 },
+  ];
   return (
     <section className={styles.condition}>
       <h2 className={styles.title}>
@@ -108,19 +183,19 @@ export default function ConditionSection() {
                 </span>
               </div>
               <div className={styles.methods__items}>
-                <Image alt='' src='/images/condition/methods/sber.png' width={106} height={28} />
-                <Image alt='' src='/images/condition/methods/tinkoff.png' width={106} height={31} />
-                <Image alt='' src='/images/condition/methods/rayf.png' width={117} height={26} />
-                <Image alt='' src='/images/condition/methods/gaz.png' width={88} height={42} />
-                <Image alt='' src='/images/condition/methods/alfa.png' width={142} height={28} />
-                <Image alt='' src='/images/condition/methods/qmoney.png' width={91} height={19} />
+                {images.slice(0, 6).map((img, index) => (
+                  <div
+                    key={index}
+                    className={styles.imageWrapper}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
+                    <Image alt='' src={img.src} width={img.width} height={img.height} />
+                  </div>
+                ))}
               </div>
             </div>
-            <div
-              className={styles.methods__block_radius}
-              data-aos-duration='1100'
-              data-aos='fade-down'
-            ></div>
+            <AnimatedSVG hoveredIndex={hoveredIndex} />
             <div
               className={styles.methods__block_right}
               data-aos-duration='1100'
@@ -139,18 +214,16 @@ export default function ConditionSection() {
                 </span>
               </div>
               <div className={styles.methods__items}>
-                <Image alt='' src='/images/condition/methods/sber.png' width={106} height={28} />
-                <Image alt='' src='/images/condition/methods/tinkoff.png' width={106} height={31} />
-                <Image alt='' src='/images/condition/methods/rayf.png' width={117} height={26} />
-                <Image alt='' src='/images/condition/methods/gaz.png' width={88} height={42} />
-                <Image alt='' src='/images/condition/methods/alfa.png' width={142} height={28} />
-                <Image alt='' src='/images/condition/methods/qmoney.png' width={91} height={19} />
-                <Image alt='' src='/images/condition/methods/union.png' width={99} height={22} />
-                <Image alt='' src='/images/condition/methods/tele.png' width={66} height={25} />
-                <Image alt='' src='/images/condition/methods/bilayn.png' width={76} height={22} />
-                <Image alt='' src='/images/condition/methods/megafon.png' width={94} height={17} />
-                <Image alt='' src='/images/condition/methods/yota.png' width={52} height={24} />
-                <Image alt='' src='/images/condition/methods/steam.png' width={87} height={28} />
+                {images.map((img, index) => (
+                  <div
+                    key={index}
+                    className={styles.imageWrapper}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
+                    <Image alt='' src={img.src} width={img.width} height={img.height} />
+                  </div>
+                ))}
               </div>
             </div>
           </div>

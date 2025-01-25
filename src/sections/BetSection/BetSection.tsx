@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { liMassive, liMassive2, tableData } from './data';
 import Shedule from './Shedule/Shedule';
 import { Crypto, Ecommerce, Exchanger, Wallet } from './Shedule/data';
+import Link from 'next/link';
+import clsx from 'clsx';
 
 export default function BetSection() {
   const [countMounth, setCountMounth] = useState<number>(0);
@@ -310,6 +312,7 @@ export default function BetSection() {
               </td>
               <td>
                 <input
+                  placeholder='0'
                   type='number'
                   onChange={(e) => setCountMounth(Number(e.currentTarget.value))}
                   placeholder='0'
@@ -349,14 +352,14 @@ export default function BetSection() {
         </table>
       </div>
       <div className={styles.icons}>
-        <a href='/' className={styles.icon}>
+        <Link href='/' className={styles.icon}>
           <Image src={'/images/online.png'} alt='online' width={200} height={250} />
           <p className={styles.iconText}>Написать</p>
-        </a>
-        <a href='/' className={styles.icon}>
+        </Link>
+        <Link href='/' className={clsx(styles.icon, styles.iconTop)}>
           <Image src={'/images/clients/telephone.png'} alt='online' width={200} height={250} />
           <p className={styles.iconText}>Позвонить</p>
-        </a>
+        </Link>
       </div>
     </section>
   );

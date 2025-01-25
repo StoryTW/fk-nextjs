@@ -19,7 +19,13 @@
     }
 
     @include respond(tablet) {
-      gap: 50px;
+      gap: 0px;
+    }
+
+    .iconTop {
+      @include respond(tablet) {
+        margin-top: -80px;
+      }
     }
 
     .icon {
@@ -38,6 +44,7 @@
 
   .content {
     display: flex;
+
     @include respond(laptopC) {
       flex-direction: column;
     }
@@ -122,6 +129,7 @@
     &:hover {
       filter: contrast(2);
     }
+
     &:active {
       scale: 0.9;
     }
@@ -143,9 +151,11 @@
   .tdText {
     background: none !important;
     border: none !important;
+
     span {
       font-weight: 600;
     }
+
     p {
       font-style: italic;
     }
@@ -178,11 +188,9 @@
     border: none !important;
     font-style: italic !important;
     background: rgb(226, 226, 226) !important;
-    background: linear-gradient(
-      180deg,
-      rgb(237, 237, 237) 0%,
-      rgba(50, 145, 164, 0) 100%
-    ) !important;
+    background: linear-gradient(180deg,
+        rgb(237, 237, 237) 0%,
+        rgba(50, 145, 164, 0) 100%) !important;
   }
 
   .contentImg {
