@@ -5,7 +5,6 @@ import React from 'react';
 import { SOCIALS } from '@/sections/OurTeam/OurTeam.data';
 import Image from 'next/image';
 import { Online } from '@/components/Online/Online';
-import { tree } from 'next/dist/build/templates/app-page';
 
 const images = [
   '/images/project-life-page/image.png',

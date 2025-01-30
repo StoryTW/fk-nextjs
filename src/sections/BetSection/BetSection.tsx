@@ -315,7 +315,6 @@ export default function BetSection() {
                   placeholder='0'
                   type='number'
                   onChange={(e) => setCountMounth(Number(e.currentTarget.value))}
-                  placeholder='0'
                 />
               </td>
               <td>
