@@ -6,20 +6,20 @@ import Image from 'next/image';
 const DATA = [
   {
     src: '/images/contacts/whatsapp.png',
-    href: '/',
+    href: 'https://api.whatsapp.com/send?phone=79963427459',
   },
   {
     src: '/images/contacts/telegram.png',
-    href: '/',
+    href: 'https://t.me/+O9MX7Eezt5U2Mjcy ',
   },
   {
     src: '/images/contacts/email.png',
-    href: '/',
+    href: 'mailto:sales@firekassa.com',
   },
-  {
-    src: '/images/contacts/vk.png',
-    href: '/',
-  },
+  // {
+  //   src: '/images/contacts/vk.png',
+  //   href: '/',
+  // },
 ];
 
 export const SocialsBlock: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => {
