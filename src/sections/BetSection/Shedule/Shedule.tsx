@@ -1,3 +1,4 @@
+import { turnoverFormat } from '@/utils/helpers/turnoverFomat';
 import React from 'react';
 import { Bar, BarChart, ResponsiveContainer, Tooltip, TooltipProps, XAxis, YAxis } from 'recharts';
 
@@ -35,7 +36,11 @@ const Shedule = ({ data }: any) => {
             bottom: 5,
           }}
         >
-          <YAxis type='number' dataKey='turnover' />
+          <YAxis
+            type='number'
+            dataKey='turnover'
+            tickFormatter={(value) => turnoverFormat(value)}
+          />
           <XAxis type='category' dataKey='percent' />
           <Tooltip content={<CustomTooltip />} />
           <Bar dataKey='turnover' fill='#f99532' barSize={20} />
