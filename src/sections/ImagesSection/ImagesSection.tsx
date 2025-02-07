@@ -10,10 +10,11 @@ type TImageBlock = {
 const ImageBlock: FC<TImageBlock> = ({ src }) => {
   return (
     <div className={styles.block}>
-      <Image src={src} width={477} height={284} alt='image' />
+      <Image src={src} width={475} height={284} alt='image' className={styles.image} />
+
       <Image
         src={'/images/project-life-page/image-el.png'}
-        width={459}
+        width={457}
         height={507}
         alt='image-el'
         className={styles.imagesEl}
