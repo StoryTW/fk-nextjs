@@ -71,15 +71,17 @@ const ProjectLifePage = () => {
             всегда разделился, на сноубордистов и лыжников.
           </p>
         </div>
-        <ImagesSection
-          widthMidImg={431}
-          heightMidImg={64}
-          className={styles.imagesSection3}
-          isOrangeBackMidImg={false}
-          isBlueBackMidImg={false}
-          images={images3}
-          imgMiddle='/images/project-life-page/logo_fk.png'
-        />
+        <div className={styles.blockImageTop}>
+          <ImagesSection
+            widthMidImg={431}
+            heightMidImg={64}
+            className={styles.imagesSection3}
+            isOrangeBackMidImg={false}
+            isBlueBackMidImg={false}
+            images={images3}
+            imgMiddle='/images/project-life-page/logo_fk.png'
+          />
+        </div>
         <div className={styles.descriptions}>
           <p className={styles.text}>
             Одно из наших любимых мест в России - конечно же Сочи. При правильно выбранном сезоне
