@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState } from 'react';
 import styles from './BetSection.module.scss';
 import Image from 'next/image';
@@ -8,7 +7,16 @@ import Shedule from './Shedule/Shedule';
 import { Crypto, Ecommerce, Exchanger, Wallet } from './Shedule/data';
 import Link from 'next/link';
 import clsx from 'clsx';
-import { AnimatePresence } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
+
+const animateHeightWithOpacity = {
+  hide: {
+    height: 0,
+  },
+  show: {
+    height: 'auto',
+  },
+};
 
 export default function BetSection() {
   const [countMounth, setCountMounth] = useState<number>(0);
@@ -335,33 +343,45 @@ export default function BetSection() {
               <td>{betAquaring}</td>
               <td>{betApi}</td>
             </tr>
-            {(betApi || betAquaring) && (
-              <AnimatePresence>
-                <tr>
-                  <td colSpan={6} className={styles.tdText}>
-                    <span>
-                      За более точным расчетом обращайтесь к нашим сотрудникам в предоставленной форме
-                      ниже.
-                    </span>
-                    <br />
-                    <br />
-                    <p>Оставьте заявку на расчет тарифа, Наши специалисты свяжутся с Вами.</p>
-                  </td>
-                </tr>
-              </AnimatePresence>
-            )}
           </tbody>
         </table>
-      </div>
-      <div className={styles.icons}>
-        <Link href='/' className={styles.icon}>
-          <Image src={'/images/online.png'} alt='online' width={200} height={250} />
-          <p className={styles.iconText}>Написать</p>
-        </Link>
-        <Link href='/' className={clsx(styles.icon, styles.iconTop)}>
-          <Image src={'/images/clients/telephone.png'} alt='online' width={200} height={250} />
-          <p className={styles.iconText}>Позвонить</p>
-        </Link>
+        <AnimatePresence mode='wait'>
+          {(betApi || betAquaring) && (
+            <motion.div
+              variants={animateHeightWithOpacity}
+              initial={'hide'}
+              animate={'show'}
+              exit={'hide'}
+              transition={{ duration: 0.4 }}
+            >
+              <div className={styles.tdText}>
+                <span>
+                  За более точным расчетом обращайтесь к нашим сотрудникам в предоставленной форме
+                  ниже.
+                </span>
+                <br />
+                <br />
+                <p>Оставьте заявку на расчет тарифа, Наши специалисты свяжутся с Вами.</p>
+              </div>
+
+              <div className={styles.icons}>
+                <Link href='/' className={styles.icon}>
+                  <Image src={'/images/online.png'} alt='online' width={200} height={250} />
+                  <p className={styles.iconText}>Написать</p>
+                </Link>
+                <Link href='/' className={clsx(styles.icon, styles.iconTop)}>
+                  <Image
+                    src={'/images/clients/telephone.png'}
+                    alt='online'
+                    width={200}
+                    height={250}
+                  />
+                  <p className={styles.iconText}>Позвонить</p>
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
