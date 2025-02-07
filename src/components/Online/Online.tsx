@@ -8,7 +8,12 @@ interface IOnline extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 export const Online: FC<IOnline> = ({ className, descriptionColor = 'gray', ...props }) => {
   return (
-    <a href='#' target='_blank' className={clsx(styles.online, className)} {...props}>
+    <a
+      href='https://t.me/VyachAntipov'
+      target='_blank'
+      className={clsx(styles.online, className)}
+      {...props}
+    >
       <span className={styles.text}>ON-LINE</span>
       <span className={clsx(styles.description, styles[descriptionColor])}>
         онлайн-консультация

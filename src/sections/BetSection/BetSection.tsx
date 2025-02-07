@@ -11,7 +11,7 @@ import clsx from 'clsx';
 
 export default function BetSection() {
   const [countMounth, setCountMounth] = useState<number>(0);
-  const [url, setUrl] = useState<string>('www.firekassa.com');
+  const [url, setUrl] = useState<string>('example.com');
   const [type, setType] = useState<string>(tableData[0].typeProject);
   const [betAquaring, setBetAquaring] = useState<string>('');
   const [betApi, setBetApi] = useState<string>('');
@@ -323,7 +323,7 @@ export default function BetSection() {
               <td>
                 <input
                   type='text'
-                  placeholder='firekassa/com'
+                  placeholder='Введите ваш домен'
                   value={url}
                   onChange={(e) => setUrl(e.currentTarget.value)}
                 />
