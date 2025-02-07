@@ -23,7 +23,7 @@ export default function BetSection() {
   ]);
 
   const setEcommerce = () => {
-    if (countMounth === 0 && countMounth <= 100000) {
+    if (countMounth === 0 || countMounth <= 100000) {
       if (url) {
         setBetAquaring('6,6 - 8,6%');
         setBetApi('6,0 - 6,8%');
@@ -94,7 +94,7 @@ export default function BetSection() {
   const handleClickButton = () => {
     switch (type) {
       case 'Обменник':
-        if (countMounth === 0 && countMounth <= 1000000) {
+        if (countMounth === 0 || countMounth <= 1000000) {
           if (url) {
             setBetAquaring('5,2 - 6,3%');
             setBetApi('4,7 - 5,2%');
@@ -141,7 +141,7 @@ export default function BetSection() {
         break;
 
       case 'Криптовалютная биржа':
-        if (countMounth === 0 && countMounth <= 1000000) {
+        if (countMounth === 0 || countMounth <= 1000000) {
           if (url) {
             setBetAquaring('5,2 - 6,3%');
             setBetApi('4,5 - 5,2%');
@@ -188,7 +188,7 @@ export default function BetSection() {
         break;
 
       case 'Электронный кошелек':
-        if (countMounth === 0 && countMounth <= 1000000) {
+        if (countMounth === 0 || countMounth <= 1000000) {
           if (url) {
             setBetAquaring('6,6 - 8,6%');
             setBetApi('6,0 - 6,8%');
