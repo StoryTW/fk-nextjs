@@ -328,7 +328,7 @@ export default function BetSection() {
                   onChange={(e) => setUrl(e.currentTarget.value)}
                 />
               </td>
-              <td className={styles.calculateBtn} onClick={handleClickButton}>
+              <td className={styles.calculateBtn} onClick={() => handleClickButton()}>
                 рассчитать
               </td>
               <td>{betAquaring}</td>
