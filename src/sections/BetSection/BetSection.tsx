@@ -265,6 +265,7 @@ export default function BetSection() {
           className={styles.line}
         />
       </h2>
+
       <div className={styles.content}>
         <Shedule data={dataShedule} />
         <div>
