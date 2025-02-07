@@ -6,7 +6,7 @@ import { ROUTER } from '@/utils/router';
 
 const DATA = [
   {
-    href: '#',
+    href: ROUTER.CONTACTS,
     name: 'Обратная связь',
   },
   {
