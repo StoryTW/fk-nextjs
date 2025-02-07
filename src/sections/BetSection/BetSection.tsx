@@ -8,6 +8,7 @@ import Shedule from './Shedule/Shedule';
 import { Crypto, Ecommerce, Exchanger, Wallet } from './Shedule/data';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { AnimatePresence } from 'motion/react';
 
 export default function BetSection() {
   const [countMounth, setCountMounth] = useState<number>(0);
@@ -335,17 +336,19 @@ export default function BetSection() {
               <td>{betApi}</td>
             </tr>
             {(betApi || betAquaring) && (
-              <tr>
-                <td colSpan={6} className={styles.tdText}>
-                  <span>
-                    За более точным расчетом обращайтесь к нашим сотрудникам в предоставленной форме
-                    ниже.
-                  </span>
-                  <br />
-                  <br />
-                  <p>Оставьте заявку на расчет тарифа, Наши специалисты свяжутся с Вами.</p>
-                </td>
-              </tr>
+              <AnimatePresence>
+                <tr>
+                  <td colSpan={6} className={styles.tdText}>
+                    <span>
+                      За более точным расчетом обращайтесь к нашим сотрудникам в предоставленной форме
+                      ниже.
+                    </span>
+                    <br />
+                    <br />
+                    <p>Оставьте заявку на расчет тарифа, Наши специалисты свяжутся с Вами.</p>
+                  </td>
+                </tr>
+              </AnimatePresence>
             )}
           </tbody>
         </table>
