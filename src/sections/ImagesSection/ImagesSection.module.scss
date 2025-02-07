@@ -38,6 +38,10 @@
   width: 468px;
   height: 547px;
 
+  @include respond(laptopL) {
+    width: 300px;
+  }
+
   @include respond(mobileL) {
     width: 100%;
   }
@@ -82,7 +86,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 90px;
+  gap: 10px;
   margin-top: -25px;
 
   @include respond(laptop) {

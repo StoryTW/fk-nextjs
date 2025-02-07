@@ -53,15 +53,18 @@ const ProjectLifePage = () => {
             поводу можем забронировать крышу ресторана и устроить полноценное празднование.
           </p>
         </div>
-        <ImagesSection
-          widthMidImg={611}
-          heightMidImg={541}
-          images={images2}
-          isBlueBackMidImg={true}
-          isOrangeBackMidImg={false}
-          imgMiddle='/images/project-life-page/people2.png'
-          isReverse
-        />
+        <div className={styles.blockImageTop}>
+          <ImagesSection
+            widthMidImg={611}
+            heightMidImg={541}
+            images={images2}
+            isBlueBackMidImg={true}
+            isOrangeBackMidImg={false}
+            imgMiddle='/images/project-life-page/people2.png'
+            isReverse
+          />
+        </div>
+
         <div className={styles.description}>
           <p className={styles.text}>
             Те кто отдохнул вечером в караоке, отправляются с утра кататься в горы. Лагерь как
