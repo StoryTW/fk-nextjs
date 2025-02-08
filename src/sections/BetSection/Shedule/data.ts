@@ -5,11 +5,23 @@ function getRandomValue(min, max) {
 function createArrayWithRange(countObjects, turnoverMin, turnoverMax, percentMin, percentMax) {
   const array: any = [];
   for (let i = 0; i < countObjects; i++) {
-    array.push({
-      turnover: Math.floor(getRandomValue(turnoverMin, turnoverMax)), // Случайное целое в диапазоне
-      percent: parseFloat(getRandomValue(percentMin, percentMax).toFixed(2)), // Случайное число с 2 знаками после запятой
-    });
+    // array.push({
+    //   turnover: Math.floor(getRandomValue(turnoverMin, turnoverMax)), // Случайное целое в диапазоне
+    //   percent: parseFloat(getRandomValue(percentMin, percentMax).toFixed(2)), // Случайное число с 2 знаками после запятой
+    // });
+
+    const percent = parseFloat(getRandomValue(percentMin, percentMax).toFixed(2));
+    const turnover = Math.floor(
+      turnoverMax -
+        ((percent - percentMin) / (percentMax - percentMin)) * (turnoverMax - turnoverMin),
+    );
+
+    array.push({ turnover, percent });
   }
+
+  // Дополнительно сортируем массив на случай разрывов
+  array.sort((a, b) => b.percent - a.percent);
+
   return array;
 }
 

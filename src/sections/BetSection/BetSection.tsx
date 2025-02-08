@@ -366,11 +366,11 @@ export default function BetSection() {
               </div>
 
               <div className={styles.icons}>
-                <Link href='/' className={styles.icon}>
+                <Link href='https://t.me/VyachAntipov' target='_blank' className={styles.icon}>
                   <Image src={'/images/online.png'} alt='online' width={200} height={250} />
                   <p className={styles.iconText}>Написать</p>
                 </Link>
-                <Link href='/' className={clsx(styles.icon, styles.iconTop)}>
+                <Link href='tel:+79963427459' className={clsx(styles.icon, styles.iconTop)}>
                   <Image
                     src={'/images/clients/telephone.png'}
                     alt='online'
