@@ -18,6 +18,15 @@ export default function OurTeam() {
           className={styles.line}
         />
       </h2>
+      <div className={styles.ceo}>
+        <CardOurTeam
+          image={'/images/our-team/denis.png'}
+          name={'Ребров Денис'}
+          description={'CEO'}
+          width={216}
+          height={259}
+        />
+      </div>
       <div className={styles.content}>
         {DATA.map((card, index) => {
           return (
