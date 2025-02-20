@@ -19,13 +19,7 @@
     }
 
     @include respond(tablet) {
-      gap: 0px;
-    }
-
-    .iconTop {
-      @include respond(tablet) {
-        margin-top: -80px;
-      }
+      gap: 50px;
     }
 
     .icon {
@@ -189,9 +183,11 @@
     border: none !important;
     font-style: italic !important;
     background: rgb(226, 226, 226) !important;
-    background: linear-gradient(180deg,
-        rgb(237, 237, 237) 0%,
-        rgba(50, 145, 164, 0) 100%) !important;
+    background: linear-gradient(
+      180deg,
+      rgb(237, 237, 237) 0%,
+      rgba(50, 145, 164, 0) 100%
+    ) !important;
   }
 
   .contentImg {
