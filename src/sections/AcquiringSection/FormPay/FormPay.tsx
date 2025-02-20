@@ -82,7 +82,7 @@ export const FormPay = () => {
     <form className={styles.root} onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.wrp}>
         <div className={styles.formBlock}>
-          <div className={styles.formText}>СУМАА:</div>
+          <div className={styles.formText}>СУММА:</div>
           <div className={styles.formText}>МЕТОД ОПЛАТЫ:</div>
         </div>
 
