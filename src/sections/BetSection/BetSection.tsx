@@ -370,7 +370,7 @@ export default function BetSection() {
                   <Image src={'/images/online.png'} alt='online' width={200} height={250} />
                   <p className={styles.iconText}>Написать</p>
                 </Link>
-                <Link href='tel:+79963427459' className={clsx(styles.icon, styles.iconTop)}>
+                {/* <Link href='tel:+79963427459' className={clsx(styles.icon, styles.iconTop)}>
                   <Image
                     src={'/images/clients/telephone.png'}
                     alt='online'
@@ -378,7 +378,7 @@ export default function BetSection() {
                     height={250}
                   />
                   <p className={styles.iconText}>Позвонить</p>
-                </Link>
+                </Link> */}
               </div>
             </motion.div>
           )}

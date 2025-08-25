@@ -4,10 +4,10 @@ import clsx from 'clsx';
 import Image from 'next/image';
 
 const DATA = [
-  {
-    src: '/images/contacts/whatsapp.png',
-    href: 'https://api.whatsapp.com/send?phone=79963427459',
-  },
+  // {
+  //   src: '/images/contacts/whatsapp.png',
+  //   href: 'https://api.whatsapp.com/send?phone=79963427459',
+  // },
   {
     src: '/images/contacts/telegram.png',
     href: 'https://t.me/+O9MX7Eezt5U2Mjcy ',

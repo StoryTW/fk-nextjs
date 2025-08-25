@@ -13,14 +13,14 @@ export const ContactsPage = () => {
         <div className={styles.wrapper}>
           <div className={styles.list}>
             <div className={styles.item}>
-              Интернет проектам: <br />
-              +7 996 342 7459
+              Интернет проектам: 
+              {/* +7 996 342 7459 */}
               <br /> t.me/VyachAntipov
               <br /> С 9:00 до 19:00 ежедневно
             </div>
             <div className={styles.item}>
               По вопросам pr и сотруднечеству <br />
-              +7 996 342 7459 <br />
+              {/* +7 996 342 7459 <br /> */}
               t.me/VyachAntipov
               <br />С 9:00 до 19:00 ежедневно
             </div>

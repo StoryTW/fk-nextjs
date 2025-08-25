@@ -1,9 +1,9 @@
 export const SOCIALS = [
-  {
-    name: 'email',
-    src: '/images/contacts/whatsapp.png',
-    href: 'https://api.whatsapp.com/send?phone=79963427459',
-  },
+  // {
+  //   name: 'email',
+  //   src: '/images/contacts/whatsapp.png',
+  //   href: 'https://api.whatsapp.com/send?phone=79963427459',
+  // },
   {
     name: 'telegram',
     src: '/images/contacts/telegram.png',
