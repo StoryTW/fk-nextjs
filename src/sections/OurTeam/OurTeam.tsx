@@ -67,10 +67,10 @@ export default function OurTeam() {
               })}
             </div>
           </div>
-          <div className={styles.item_two}>
+          {/* <div className={styles.item_two}>
             <div className={styles.name}>Номер телефона:</div>
             <div className={styles.phone}>+7 996 342 7459</div>
-          </div>
+          </div> */}
         </div>
         <Online />
       </div>
